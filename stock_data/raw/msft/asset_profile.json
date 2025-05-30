@@ -1,0 +1,129 @@
+{
+    "msft": {
+        "address1": "One Microsoft Way",
+        "city": "Redmond",
+        "state": "WA",
+        "zip": "98052-6399",
+        "country": "United States",
+        "phone": "425 882 8080",
+        "website": "https://www.microsoft.com",
+        "industry": "Software - Infrastructure",
+        "industryKey": "software-infrastructure",
+        "industryDisp": "Software - Infrastructure",
+        "sector": "Technology",
+        "sectorKey": "technology",
+        "sectorDisp": "Technology",
+        "longBusinessSummary": "Microsoft Corporation develops and supports software, services, devices and solutions worldwide. The Productivity and Business Processes segment offers office, exchange, SharePoint, Microsoft Teams, office 365 Security and Compliance, Microsoft viva, and Microsoft 365 copilot; and office consumer services, such as Microsoft 365 consumer subscriptions, Office licensed on-premises, and other office services. This segment also provides LinkedIn; and dynamics business solutions, including Dynamics 365, a set of intelligent, cloud-based applications across ERP, CRM, power apps, and power automate; and on-premises ERP and CRM applications. The Intelligent Cloud segment offers server products and cloud services, such as azure and other cloud services; SQL and windows server, visual studio, system center, and related client access licenses, as well as nuance and GitHub; and enterprise services including enterprise support services, industry solutions, and nuance professional services. The More Personal Computing segment offers Windows, including windows OEM licensing and other non-volume licensing of the Windows operating system; Windows commercial comprising volume licensing of the Windows operating system, windows cloud services, and other Windows commercial offerings; patent licensing; and windows Internet of Things; and devices, such as surface, HoloLens, and PC accessories. Additionally, this segment provides gaming, which includes Xbox hardware and content, and first- and third-party content; Xbox game pass and other subscriptions, cloud gaming, advertising, third-party disc royalties, and other cloud services; and search and news advertising, which includes Bing, Microsoft News and Edge, and third-party affiliates. The company sells its products through OEMs, distributors, and resellers; and directly through digital marketplaces, online, and retail stores. The company was founded in 1975 and is headquartered in Redmond, Washington.",
+        "fullTimeEmployees": 228000,
+        "companyOfficers": [
+            {
+                "maxAge": 1,
+                "name": "Mr. Satya  Nadella",
+                "age": 57,
+                "title": "Chairman & CEO",
+                "yearBorn": 1967,
+                "fiscalYear": 2024,
+                "totalPay": 7869791,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Mr. Bradford L. Smith LCA",
+                "age": 65,
+                "title": "President & Vice Chairman",
+                "yearBorn": 1959,
+                "fiscalYear": 2024,
+                "totalPay": 4755618,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Ms. Amy E. Hood",
+                "age": 52,
+                "title": "Executive VP & CFO",
+                "yearBorn": 1972,
+                "fiscalYear": 2024,
+                "totalPay": 4704250,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Mr. Judson B. Althoff",
+                "age": 50,
+                "title": "Executive VP & Chief Commercial Officer",
+                "yearBorn": 1974,
+                "fiscalYear": 2024,
+                "totalPay": 4534974,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Ms. Carolina  Dybeck Happe",
+                "age": 52,
+                "title": "Executive VP & COO",
+                "yearBorn": 1972,
+                "fiscalYear": 2024,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Ms. Alice L. Jolla",
+                "age": 58,
+                "title": "Corporate VP & Chief Accounting Officer",
+                "yearBorn": 1966,
+                "fiscalYear": 2024,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Jonathan  Neilson",
+                "title": "Vice President of Investor Relations",
+                "fiscalYear": 2024,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Mr. Hossein  Nowbar",
+                "title": "Chief Legal Officer",
+                "fiscalYear": 2024,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Mr. Frank X. Shaw",
+                "title": "Chief Communications Officer",
+                "fiscalYear": 2024,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Mr. Takeshi  Numoto",
+                "age": 53,
+                "title": "Executive VP & Chief Marketing Officer",
+                "yearBorn": 1971,
+                "fiscalYear": 2024,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            }
+        ],
+        "auditRisk": 9,
+        "boardRisk": 5,
+        "compensationRisk": 4,
+        "shareHolderRightsRisk": 2,
+        "overallRisk": 3,
+        "governanceEpochDate": "2025-05-01 09:00:00",
+        "compensationAsOfEpochDate": "2024-12-31 09:00:00",
+        "irWebsite": "http://www.microsoft.com/investor/default.aspx",
+        "executiveTeam": [],
+        "maxAge": 86400
+    }
+}

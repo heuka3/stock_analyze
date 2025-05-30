@@ -1,0 +1,102 @@
+[
+    {
+        "maxAge": 1,
+        "name": "ALTHOFF JUDSON",
+        "relation": "Officer",
+        "url": "",
+        "transactionDescription": "Sale",
+        "latestTransDate": "2025-05-19",
+        "positionDirect": 98010,
+        "positionDirectDate": "2025-05-19"
+    },
+    {
+        "maxAge": 1,
+        "name": "COLEMAN AMY",
+        "relation": "Officer",
+        "url": "",
+        "transactionDescription": "Sale",
+        "latestTransDate": "2025-05-15",
+        "positionDirect": 43100,
+        "positionDirectDate": "2025-05-15"
+    },
+    {
+        "maxAge": 1,
+        "name": "HOGAN KATHLEEN T",
+        "relation": "Officer",
+        "url": "",
+        "transactionDescription": "Sale",
+        "latestTransDate": "2025-05-21",
+        "positionDirect": 134888,
+        "positionDirectDate": "2025-05-21"
+    },
+    {
+        "maxAge": 1,
+        "name": "LIST-STOLL TERI L",
+        "relation": "Director",
+        "url": "",
+        "transactionDescription": "Stock Award(Grant)",
+        "latestTransDate": "2024-12-09",
+        "positionDirect": 2264,
+        "positionDirectDate": "2024-12-09"
+    },
+    {
+        "maxAge": 1,
+        "name": "LIST-STOLL TERI L.",
+        "relation": "Director",
+        "url": "",
+        "transactionDescription": "Stock Award(Grant)",
+        "latestTransDate": "2025-01-31",
+        "positionDirect": 2415,
+        "positionDirectDate": "2025-01-31"
+    },
+    {
+        "maxAge": 1,
+        "name": "MASON MARK",
+        "relation": "Director",
+        "url": "",
+        "transactionDescription": "Stock Award(Grant)",
+        "latestTransDate": "2025-01-31",
+        "positionDirect": 1143,
+        "positionDirectDate": "2025-01-31"
+    },
+    {
+        "maxAge": 1,
+        "name": "NUMOTO TAKESHI",
+        "relation": "Officer",
+        "url": "",
+        "transactionDescription": "Sale",
+        "latestTransDate": "2024-12-09",
+        "positionDirect": 49351,
+        "positionDirectDate": "2024-12-09"
+    },
+    {
+        "maxAge": 1,
+        "name": "SCHARF CHARLES W",
+        "relation": "Director",
+        "url": "",
+        "transactionDescription": "Stock Award(Grant)",
+        "latestTransDate": "2025-01-31",
+        "positionDirect": 44885,
+        "positionDirectDate": "2025-01-31"
+    },
+    {
+        "maxAge": 1,
+        "name": "SMITH BRADFORD LEE",
+        "relation": "President",
+        "url": "",
+        "transactionDescription": "Sale",
+        "latestTransDate": "2025-05-05",
+        "positionDirect": 471036,
+        "positionDirectDate": "2025-05-05"
+    },
+    {
+        "maxAge": 1,
+        "name": "STANTON JOHN W.",
+        "relation": "Director",
+        "url": "",
+        "transactionDescription": "Stock Award(Grant)",
+        "latestTransDate": "2025-01-31",
+        "positionDirect": 85616,
+        "positionDirectDate": "2025-01-31"
+    }
+]

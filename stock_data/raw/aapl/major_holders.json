@@ -1,0 +1,9 @@
+{
+    "aapl": {
+        "maxAge": 1,
+        "insidersPercentHeld": 0.02085,
+        "institutionsPercentHeld": 0.62839,
+        "institutionsFloatPercentHeld": 0.64177,
+        "institutionsCount": 7016
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "googl": {
+        "maxAge": 86400,
+        "totalEsg": 24.89,
+        "environmentScore": 2.94,
+        "socialScore": 11.74,
+        "governanceScore": 10.21,
+        "ratingYear": 2025,
+        "ratingMonth": 5,
+        "highestControversy": 4.0,
+        "peerCount": 577,
+        "esgPerformance": "AVG_PERF",
+        "peerGroup": "Software & Services",
+        "relatedControversy": [
+            "Customer Incidents"
+        ],
+        "peerEsgScorePerformance": {
+            "min": 7.44,
+            "avg": 20.931663778162918,
+            "max": 32.73
+        },
+        "peerGovernancePerformance": {
+            "min": 1.34,
+            "avg": 5.605,
+            "max": 10.54
+        },
+        "peerSocialPerformance": {
+            "min": 4.49,
+            "avg": 9.94333333333333,
+            "max": 21.64
+        },
+        "peerEnvironmentPerformance": {
+            "min": 0.05,
+            "avg": 3.160079365079365,
+            "max": 6.87
+        },
+        "peerHighestControversyPerformance": {
+            "min": 0.0,
+            "avg": 0.6637781629116117,
+            "max": 4.0
+        },
+        "percentile": null,
+        "environmentPercentile": null,
+        "socialPercentile": null,
+        "governancePercentile": null,
+        "adult": false,
+        "alcoholic": false,
+        "animalTesting": false,
+        "catholic": null,
+        "controversialWeapons": false,
+        "smallArms": false,
+        "furLeather": false,
+        "gambling": false,
+        "gmo": false,
+        "militaryContract": false,
+        "nuclear": false,
+        "pesticides": false,
+        "palmOil": false,
+        "coal": false,
+        "tobacco": false
+    }
+}

@@ -1,0 +1,779 @@
+{
+  "meta": {
+    "ticker": "MSFT",
+    "currency": "USD",
+    "asOfDate": "2024-06-30",
+    "period": "annual"
+  },
+  "themes": [
+    {
+      "theme": "Fundamentals",
+      "subthemes": [
+        {
+          "name": "Profitability",
+          "metrics": [
+            {
+              "metric": "Return on Equity (ROE)",
+              "field": "financial_data.msft.returnOnEquity",
+              "unit": "%",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.3361,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Return on Assets (ROA)",
+              "field": "financial_data.msft.returnOnAssets",
+              "unit": "%",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.14581999,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Gross Margin",
+              "field": "financial_data.msft.grossMargins",
+              "unit": "%",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.69074994,
+              "trendDescription": ""
+            },
+            {
+              "metric": "EBITDA Margin",
+              "field": "financial_data.msft.ebitdaMargins",
+              "unit": "%",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.55247,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Operating Margin",
+              "field": "financial_data.msft.operatingMargins",
+              "unit": "%",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.45671,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Net Margin",
+              "field": "financial_data.msft.profitMargins",
+              "unit": "%",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.35789,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Return on Invested Capital (ROIC)",
+              "formula": "all_financial_data_annual[-1].EBIT * (1 - all_financial_data_annual[-1].TaxRateForCalcs) ÷ all_financial_data_annual[-1].InvestedCapital",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 0.2829385049374116,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Financial Health",
+          "metrics": [
+            {
+              "metric": "Quick Ratio",
+              "field": "financial_data.msft.quickRatio",
+              "unit": "x",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 1.244,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Current Ratio",
+              "field": "financial_data.msft.currentRatio",
+              "unit": "x",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 1.372,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Debt to Equity",
+              "field": "financial_data.msft.debtToEquity",
+              "unit": "x",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 32.626,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Total Debt",
+              "field": "financial_data.msft.totalDebt",
+              "unit": "USD",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 105018998784,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Total Cash",
+              "field": "financial_data.msft.totalCash",
+              "unit": "USD",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 79617998848,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Net Debt",
+              "formula": "financial_data.msft.totalDebt - financial_data.msft.totalCash",
+              "unit": "USD",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 25400999936,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Interest Coverage",
+              "formula": "all_financial_data_annual[-1].EBIT ÷ all_financial_data_annual[-1].InterestExpense",
+              "unit": "x",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 37.72470187393527,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Net Debt / EBITDA",
+              "formula": "all_financial_data_annual[-1].NetDebt ÷ all_financial_data_annual[-1].EBITDA",
+              "unit": "x",
+              "preferred_direction": "low",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 0.2504717725868174,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Growth",
+          "metrics": [
+            {
+              "metric": "Revenue Growth (YoY)",
+              "field": "financial_data.msft.revenueGrowth",
+              "unit": "%",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.133,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Earnings Growth (YoY)",
+              "field": "financial_data.msft.earningsGrowth",
+              "unit": "%",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.177,
+              "trendDescription": ""
+            },
+            {
+              "metric": "5-Year Revenue CAGR",
+              "formula": "((all_financial_data_annual[-1].totalRevenue ÷ all_financial_data_annual[0].totalRevenue)^(1/4) - 1)",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": null,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Next EPS Estimate",
+              "field": "earnings_trend.msft.trend[0].earningsEstimate.avg",
+              "unit": "USD",
+              "dataAge": "earnings_trend.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "earnings_trend"
+              ],
+              "commentary": "",
+              "latestValue": 3.37318,
+              "trendDescription": "",
+              "value": 3.37318
+            },
+            {
+              "metric": "3-Year Revenue CAGR",
+              "formula": "((all_financial_data_annual[-1].TotalRevenue ÷ all_financial_data_annual[-4].TotalRevenue)^(1/3) - 1)",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 0.13400558612967717,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Cash & Dividend",
+          "metrics": [
+            {
+              "metric": "Free Cash Flow",
+              "field": "financial_data.msft.freeCashflow",
+              "unit": "USD",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 54817001472,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Operating Cash Flow",
+              "field": "financial_data.msft.operatingCashflow",
+              "unit": "USD",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 130710003712,
+              "trendDescription": ""
+            },
+            {
+              "metric": "FCF Margin",
+              "formula": "financial_data.msft.freeCashflow ÷ financial_data.msft.operatingCashflow",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.4193787767979954,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Dividend Yield",
+              "field": "summary_detail.msft.dividendYield",
+              "unit": "%",
+              "dataAge": "summary_detail.msft.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 0.0072000003,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Payout Ratio",
+              "field": "summary_detail.msft.payoutRatio",
+              "unit": "%",
+              "dataAge": "summary_detail.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 0.2442,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Ex-Dividend Date",
+              "field": "summary_detail.msft.exDividendDate",
+              "unit": "date",
+              "dataAge": "summary_detail.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": "2025-05-15 09:00:00",
+              "trendDescription": ""
+            },
+            {
+              "metric": "FCF Conversion (FCF/NI)",
+              "formula": "all_financial_data_annual[-1].FreeCashFlow ÷ all_financial_data_annual[-1].NetIncome",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 0.8404170826903876,
+              "trendDescription": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "Valuation",
+      "subthemes": [
+        {
+          "name": "Multiples",
+          "metrics": [
+            {
+              "metric": "Trailing P/E",
+              "field": "summary_detail.msft.trailingPE",
+              "unit": "x",
+              "dataAge": "summary_detail.msft.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 35.47409,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Forward P/E",
+              "field": "key_stats.msft.forwardPE",
+              "unit": "x",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 30.39659,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Price/Sales (TTM)",
+              "field": "summary_detail.msft.priceToSalesTrailing12Months",
+              "unit": "x",
+              "dataAge": "summary_detail.msft.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 12.626041,
+              "trendDescription": ""
+            },
+            {
+              "metric": "EV/EBITDA (TTM)",
+              "field": "key_stats.msft.enterpriseToEbitda",
+              "unit": "x",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 23.024,
+              "trendDescription": ""
+            },
+            {
+              "metric": "EV/Revenue (TTM)",
+              "field": "key_stats.msft.enterpriseToRevenue",
+              "unit": "x",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 12.72,
+              "trendDescription": ""
+            },
+            {
+              "metric": "EV/FCF",
+              "formula": "all_financial_data_annual[-1].EnterpriseValue ÷ all_financial_data_annual[-1].FreeCashFlow",
+              "unit": "x",
+              "preferred_direction": "low",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 44.8457166047171,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Targets",
+          "metrics": [
+            {
+              "metric": "Analyst Target Mean",
+              "field": "financial_data.msft.targetMeanPrice",
+              "unit": "USD",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 509.91693,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Upside to Target",
+              "formula": "(financial_data.msft.targetMeanPrice - financial_data.msft.currentPrice) ÷ financial_data.msft.currentPrice",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.11170517572163594,
+              "trendDescription": ""
+            },
+            {
+              "metric": "# Analyst Opinions",
+              "field": "financial_data.msft.numberOfAnalystOpinions",
+              "unit": "count",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 52,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Market Capitalization",
+              "field": "summary_detail.msft.marketCap",
+              "unit": "USD",
+              "dataAge": "summary_detail.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 3409157554176,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Enterprise Value",
+              "field": "key_stats.msft.enterpriseValue",
+              "unit": "USD",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 3434560094208,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Book Value per Share",
+              "field": "key_stats.msft.bookValue",
+              "unit": "USD",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 43.3,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Price-to-Book Ratio",
+              "field": "key_stats.msft.priceToBook",
+              "unit": "x",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 10.593072,
+              "trendDescription": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "Market & Flow",
+      "subthemes": [
+        {
+          "name": "Ownership & Insider",
+          "metrics": [
+            {
+              "metric": "Institutional Ownership %",
+              "field": "key_stats.msft.heldPercentInstitutions",
+              "unit": "%",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 0.74658996,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Insider Buys",
+              "formula": "count(insider_transactions where transactionText contains 'Purchase')",
+              "unit": "count",
+              "preferred_direction": "context",
+              "source": [
+                "insider_transactions"
+              ],
+              "commentary": "",
+              "value": 0,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Insider Sells",
+              "formula": "count(insider_transactions where transactionText contains 'Sale')",
+              "unit": "count",
+              "preferred_direction": "context",
+              "source": [
+                "insider_transactions"
+              ],
+              "commentary": "",
+              "value": 28,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Short Interest %",
+              "field": "key_stats.msft.shortPercentOfFloat",
+              "unit": "%",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 0.0077,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Short Ratio",
+              "field": "key_stats.msft.shortRatio",
+              "unit": "days",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 2.48,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Shares Outstanding",
+              "field": "key_stats.msft.sharesOutstanding",
+              "unit": "count",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 7432540160,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Float Shares",
+              "field": "key_stats.msft.floatShares",
+              "unit": "count",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 7421989653,
+              "trendDescription": ""
+            },
+            {
+              "metric": "52-Week Change %",
+              "field": "key_stats.msft.52WeekChange",
+              "unit": "%",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 0.10490692,
+              "trendDescription": ""
+            },
+            {
+              "metric": "S&P 500 52-Week Change %",
+              "field": "key_stats.msft.SandP52WeekChange",
+              "unit": "%",
+              "dataAge": "key_stats.msft.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 0.1202575,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Share Buyback Change (YoY)",
+              "formula": "(all_financial_data_annual[-1].RepurchaseOfCapitalStock - all_financial_data_annual[-2].RepurchaseOfCapitalStock) ÷ abs(all_financial_data_annual[-2].RepurchaseOfCapitalStock)",
+              "unit": "%",
+              "preferred_direction": "context",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 0.2243650258485053,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Sentiment & Recommendations",
+          "metrics": [
+            {
+              "metric": "Analyst Buy %",
+              "formula": "(recommendation_trend[0].strongBuy + recommendation_trend[0].buy) ÷ sum(recommendation_trend[0].*)",
+              "unit": "%",
+              "period": "recommendation_trend[0].period",
+              "preferred_direction": "high",
+              "source": [
+                "recommendation_trend"
+              ],
+              "commentary": "",
+              "value": 0.9180327868852459,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Recommendation Mean",
+              "field": "financial_data.msft.recommendationMean",
+              "unit": "n/a",
+              "dataAge": "financial_data.msft.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 1.40984,
+              "trendDescription": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "Technical Momentum",
+      "subthemes": [
+        {
+          "name": "Moving Averages vs Price",
+          "metrics": [
+            {
+              "metric": "Price vs 50-Day MA",
+              "formula": "(financial_data.msft.currentPrice - summary_detail.msft.fiftyDayAverage) ÷ summary_detail.msft.fiftyDayAverage",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data",
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 0.12519250780947577,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Price vs 200-Day MA",
+              "formula": "(financial_data.msft.currentPrice - summary_detail.msft.twoHundredDayAverage) ÷ summary_detail.msft.twoHundredDayAverage",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data",
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 0.10062112099321764,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Price vs 52-Week High",
+              "formula": "(financial_data.msft.currentPrice - summary_detail.msft.fiftyTwoWeekHigh) ÷ summary_detail.msft.fiftyTwoWeekHigh",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data",
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": -0.02064695206576282,
+              "trendDescription": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

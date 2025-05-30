@@ -1,0 +1,779 @@
+{
+  "meta": {
+    "ticker": "GOOGL",
+    "currency": "USD",
+    "asOfDate": "2024-06-30",
+    "period": "annual"
+  },
+  "themes": [
+    {
+      "theme": "Fundamentals",
+      "subthemes": [
+        {
+          "name": "Profitability",
+          "metrics": [
+            {
+              "metric": "Return on Equity (ROE)",
+              "field": "financial_data.googl.returnOnEquity",
+              "unit": "%",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.34789002,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Return on Assets (ROA)",
+              "field": "financial_data.googl.returnOnAssets",
+              "unit": "%",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.16896999,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Gross Margin",
+              "field": "financial_data.googl.grossMargins",
+              "unit": "%",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.58591,
+              "trendDescription": ""
+            },
+            {
+              "metric": "EBITDA Margin",
+              "field": "financial_data.googl.ebitdaMargins",
+              "unit": "%",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.37726003,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Operating Margin",
+              "field": "financial_data.googl.operatingMargins",
+              "unit": "%",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.33918,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Net Margin",
+              "field": "financial_data.googl.profitMargins",
+              "unit": "%",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.30857,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Return on Invested Capital (ROIC)",
+              "formula": "all_financial_data_annual[-1].EBIT * (1 - all_financial_data_annual[-1].TaxRateForCalcs) ÷ all_financial_data_annual[-1].InvestedCapital",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 0.29880728762051034,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Financial Health",
+          "metrics": [
+            {
+              "metric": "Quick Ratio",
+              "field": "financial_data.googl.quickRatio",
+              "unit": "x",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 1.597,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Current Ratio",
+              "field": "financial_data.googl.currentRatio",
+              "unit": "x",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 1.768,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Debt to Equity",
+              "field": "financial_data.googl.debtToEquity",
+              "unit": "x",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 8.254,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Total Debt",
+              "field": "financial_data.googl.totalDebt",
+              "unit": "USD",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 28497999872,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Total Cash",
+              "field": "financial_data.googl.totalCash",
+              "unit": "USD",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 95328002048,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Net Debt",
+              "formula": "financial_data.googl.totalDebt - financial_data.googl.totalCash",
+              "unit": "USD",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": -66830002176,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Interest Coverage",
+              "formula": "all_financial_data_annual[-1].EBIT ÷ all_financial_data_annual[-1].InterestExpense",
+              "unit": "x",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 448.07089552238807,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Net Debt / EBITDA",
+              "formula": "all_financial_data_annual[-1].NetDebt ÷ all_financial_data_annual[-1].EBITDA",
+              "unit": "x",
+              "preferred_direction": "low",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": null,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Growth",
+          "metrics": [
+            {
+              "metric": "Revenue Growth (YoY)",
+              "field": "financial_data.googl.revenueGrowth",
+              "unit": "%",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.12,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Earnings Growth (YoY)",
+              "field": "financial_data.googl.earningsGrowth",
+              "unit": "%",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.488,
+              "trendDescription": ""
+            },
+            {
+              "metric": "5-Year Revenue CAGR",
+              "formula": "((all_financial_data_annual[-1].totalRevenue ÷ all_financial_data_annual[0].totalRevenue)^(1/4) - 1)",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": null,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Next EPS Estimate",
+              "field": "earnings_trend.googl.trend[0].earningsEstimate.avg",
+              "unit": "USD",
+              "dataAge": "earnings_trend.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "earnings_trend"
+              ],
+              "commentary": "",
+              "latestValue": 2.16314,
+              "trendDescription": "",
+              "value": 2.16314
+            },
+            {
+              "metric": "3-Year Revenue CAGR",
+              "formula": "((all_financial_data_annual[-1].TotalRevenue ÷ all_financial_data_annual[-4].TotalRevenue)^(1/3) - 1)",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 0.10754330242226517,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Cash & Dividend",
+          "metrics": [
+            {
+              "metric": "Free Cash Flow",
+              "field": "financial_data.googl.freeCashflow",
+              "unit": "USD",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 60679000064,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Operating Cash Flow",
+              "field": "financial_data.googl.operatingCashflow",
+              "unit": "USD",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 132601004032,
+              "trendDescription": ""
+            },
+            {
+              "metric": "FCF Margin",
+              "formula": "financial_data.googl.freeCashflow ÷ financial_data.googl.operatingCashflow",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.45760588697621485,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Dividend Yield",
+              "field": "summary_detail.googl.dividendYield",
+              "unit": "%",
+              "dataAge": "summary_detail.googl.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 0.005,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Payout Ratio",
+              "field": "summary_detail.googl.payoutRatio",
+              "unit": "%",
+              "dataAge": "summary_detail.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 0.08930001,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Ex-Dividend Date",
+              "field": "summary_detail.googl.exDividendDate",
+              "unit": "date",
+              "dataAge": "summary_detail.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": "2025-06-09 09:00:00",
+              "trendDescription": ""
+            },
+            {
+              "metric": "FCF Conversion (FCF/NI)",
+              "formula": "all_financial_data_annual[-1].FreeCashFlow ÷ all_financial_data_annual[-1].NetIncome",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 0.7267823967718092,
+              "trendDescription": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "Valuation",
+      "subthemes": [
+        {
+          "name": "Multiples",
+          "metrics": [
+            {
+              "metric": "Trailing P/E",
+              "field": "summary_detail.googl.trailingPE",
+              "unit": "x",
+              "dataAge": "summary_detail.googl.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 18.802456,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Forward P/E",
+              "field": "key_stats.googl.forwardPE",
+              "unit": "x",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 16.562717,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Price/Sales (TTM)",
+              "field": "summary_detail.googl.priceToSalesTrailing12Months",
+              "unit": "x",
+              "dataAge": "summary_detail.googl.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 5.700234,
+              "trendDescription": ""
+            },
+            {
+              "metric": "EV/EBITDA (TTM)",
+              "field": "key_stats.googl.enterpriseToEbitda",
+              "unit": "x",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 14.572,
+              "trendDescription": ""
+            },
+            {
+              "metric": "EV/Revenue (TTM)",
+              "field": "key_stats.googl.enterpriseToRevenue",
+              "unit": "x",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 5.498,
+              "trendDescription": ""
+            },
+            {
+              "metric": "EV/FCF",
+              "formula": "all_financial_data_annual[-1].EnterpriseValue ÷ all_financial_data_annual[-1].FreeCashFlow",
+              "unit": "x",
+              "preferred_direction": "low",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 30.94279313946457,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Targets",
+          "metrics": [
+            {
+              "metric": "Analyst Target Mean",
+              "field": "financial_data.googl.targetMeanPrice",
+              "unit": "USD",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 201.4652,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Upside to Target",
+              "formula": "(financial_data.googl.targetMeanPrice - financial_data.googl.currentPrice) ÷ financial_data.googl.currentPrice",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.19585208048910793,
+              "trendDescription": ""
+            },
+            {
+              "metric": "# Analyst Opinions",
+              "field": "financial_data.googl.numberOfAnalystOpinions",
+              "unit": "count",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 52,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Market Capitalization",
+              "field": "summary_detail.googl.marketCap",
+              "unit": "USD",
+              "dataAge": "summary_detail.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 2050448293888,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Enterprise Value",
+              "field": "key_stats.googl.enterpriseValue",
+              "unit": "USD",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 1977553387520,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Book Value per Share",
+              "field": "key_stats.googl.bookValue",
+              "unit": "USD",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 28.405,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Price-to-Book Ratio",
+              "field": "key_stats.googl.priceToBook",
+              "unit": "x",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 5.930998,
+              "trendDescription": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "Market & Flow",
+      "subthemes": [
+        {
+          "name": "Ownership & Insider",
+          "metrics": [
+            {
+              "metric": "Institutional Ownership %",
+              "field": "key_stats.googl.heldPercentInstitutions",
+              "unit": "%",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 0.81012,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Insider Buys",
+              "formula": "count(insider_transactions where transactionText contains 'Purchase')",
+              "unit": "count",
+              "preferred_direction": "context",
+              "source": [
+                "insider_transactions"
+              ],
+              "commentary": "",
+              "value": 0,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Insider Sells",
+              "formula": "count(insider_transactions where transactionText contains 'Sale')",
+              "unit": "count",
+              "preferred_direction": "context",
+              "source": [
+                "insider_transactions"
+              ],
+              "commentary": "",
+              "value": 18,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Short Interest %",
+              "field": "key_stats.googl.shortPercentOfFloat",
+              "unit": "%",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 0.0119,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Short Ratio",
+              "field": "key_stats.googl.shortRatio",
+              "unit": "days",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 1.69,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Shares Outstanding",
+              "field": "key_stats.googl.sharesOutstanding",
+              "unit": "count",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 5820000256,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Float Shares",
+              "field": "key_stats.googl.floatShares",
+              "unit": "count",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 10875751050,
+              "trendDescription": ""
+            },
+            {
+              "metric": "52-Week Change %",
+              "field": "key_stats.googl.52WeekChange",
+              "unit": "%",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": -0.044954658,
+              "trendDescription": ""
+            },
+            {
+              "metric": "S&P 500 52-Week Change %",
+              "field": "key_stats.googl.SandP52WeekChange",
+              "unit": "%",
+              "dataAge": "key_stats.googl.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 0.09362543,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Share Buyback Change (YoY)",
+              "formula": "(all_financial_data_annual[-1].RepurchaseOfCapitalStock - all_financial_data_annual[-2].RepurchaseOfCapitalStock) ÷ abs(all_financial_data_annual[-2].RepurchaseOfCapitalStock)",
+              "unit": "%",
+              "preferred_direction": "context",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": -0.011674037460978148,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Sentiment & Recommendations",
+          "metrics": [
+            {
+              "metric": "Analyst Buy %",
+              "formula": "(recommendation_trend[0].strongBuy + recommendation_trend[0].buy) ÷ sum(recommendation_trend[0].*)",
+              "unit": "%",
+              "period": "recommendation_trend[0].period",
+              "preferred_direction": "high",
+              "source": [
+                "recommendation_trend"
+              ],
+              "commentary": "",
+              "value": 0.8235294117647058,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Recommendation Mean",
+              "field": "financial_data.googl.recommendationMean",
+              "unit": "n/a",
+              "dataAge": "financial_data.googl.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 1.57353,
+              "trendDescription": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "Technical Momentum",
+      "subthemes": [
+        {
+          "name": "Moving Averages vs Price",
+          "metrics": [
+            {
+              "metric": "Price vs 50-Day MA",
+              "formula": "(financial_data.googl.currentPrice - summary_detail.googl.fiftyDayAverage) ÷ summary_detail.googl.fiftyDayAverage",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data",
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 0.057634720201093094,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Price vs 200-Day MA",
+              "formula": "(financial_data.googl.currentPrice - summary_detail.googl.twoHundredDayAverage) ÷ summary_detail.googl.twoHundredDayAverage",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data",
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": -0.014670859009091175,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Price vs 52-Week High",
+              "formula": "(financial_data.googl.currentPrice - summary_detail.googl.fiftyTwoWeekHigh) ÷ summary_detail.googl.fiftyTwoWeekHigh",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data",
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": -0.18633180391209858,
+              "trendDescription": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

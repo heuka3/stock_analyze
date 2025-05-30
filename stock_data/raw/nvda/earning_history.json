@@ -1,0 +1,42 @@
+[
+    {
+        "maxAge": 1,
+        "epsActual": 0.68,
+        "epsEstimate": 0.6436,
+        "epsDifference": 0.04,
+        "surprisePercent": 0.056599997,
+        "quarter": "2024-07-31",
+        "currency": "USD",
+        "period": "-4q"
+    },
+    {
+        "maxAge": 1,
+        "epsActual": 0.81,
+        "epsEstimate": 0.74639,
+        "epsDifference": 0.06,
+        "surprisePercent": 0.085200004,
+        "quarter": "2024-10-31",
+        "currency": "USD",
+        "period": "-3q"
+    },
+    {
+        "maxAge": 1,
+        "epsActual": 0.89,
+        "epsEstimate": 0.84562,
+        "epsDifference": 0.04,
+        "surprisePercent": 0.0525,
+        "quarter": "2025-01-31",
+        "currency": "USD",
+        "period": "-2q"
+    },
+    {
+        "maxAge": 1,
+        "epsActual": 0.81,
+        "epsEstimate": 0.74988,
+        "epsDifference": 0.06,
+        "surprisePercent": 0.0802,
+        "quarter": "2025-04-30",
+        "currency": "USD",
+        "period": "-1q"
+    }
+]

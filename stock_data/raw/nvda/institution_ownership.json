@@ -1,0 +1,92 @@
+[
+    {
+        "maxAge": 1,
+        "reportDate": "2025-03-31",
+        "organization": "Vanguard Group Inc",
+        "pctHeld": 0.089700006,
+        "position": 2192979269,
+        "value": 305240789806,
+        "pctChange": 0.0062
+    },
+    {
+        "maxAge": 1,
+        "reportDate": "2025-03-31",
+        "organization": "Blackrock Inc.",
+        "pctHeld": 0.077800006,
+        "position": 1901848816,
+        "value": 264718341342,
+        "pctChange": 0.0064
+    },
+    {
+        "maxAge": 1,
+        "reportDate": "2025-03-31",
+        "organization": "FMR, LLC",
+        "pctHeld": 0.040999997,
+        "position": 1001925185,
+        "value": 139457968946,
+        "pctChange": -0.0023999999
+    },
+    {
+        "maxAge": 1,
+        "reportDate": "2025-03-31",
+        "organization": "State Street Corporation",
+        "pctHeld": 0.0396,
+        "position": 968654005,
+        "value": 134826953320,
+        "pctChange": 0.0008
+    },
+    {
+        "maxAge": 1,
+        "reportDate": "2025-03-31",
+        "organization": "Geode Capital Management, LLC",
+        "pctHeld": 0.0233,
+        "position": 570691561,
+        "value": 79434559768,
+        "pctChange": 0.0273
+    },
+    {
+        "maxAge": 1,
+        "reportDate": "2025-03-31",
+        "organization": "JPMORGAN CHASE & CO",
+        "pctHeld": 0.0172,
+        "position": 421100703,
+        "value": 58613007878,
+        "pctChange": 0.0176
+    },
+    {
+        "maxAge": 1,
+        "reportDate": "2025-03-31",
+        "organization": "Price (T.Rowe) Associates Inc",
+        "pctHeld": 0.0153,
+        "position": 374986428,
+        "value": 52194361828,
+        "pctChange": -0.0884
+    },
+    {
+        "maxAge": 1,
+        "reportDate": "2025-03-31",
+        "organization": "Morgan Stanley",
+        "pctHeld": 0.014099999,
+        "position": 344184079,
+        "value": 47906982796,
+        "pctChange": -0.015700001
+    },
+    {
+        "maxAge": 1,
+        "reportDate": "2024-12-31",
+        "organization": "NORGES BANK",
+        "pctHeld": 0.013200001,
+        "position": 324041286,
+        "value": 45103307389,
+        "pctChange": 0.1108
+    },
+    {
+        "maxAge": 1,
+        "reportDate": "2025-03-31",
+        "organization": "Northern Trust Corporation",
+        "pctHeld": 0.0108,
+        "position": 263027905,
+        "value": 36610854739,
+        "pctChange": -0.0128999995
+    }
+]

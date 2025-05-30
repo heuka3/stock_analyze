@@ -1,0 +1,779 @@
+{
+  "meta": {
+    "ticker": "NVDA",
+    "currency": "USD",
+    "asOfDate": "2024-06-30",
+    "period": "annual"
+  },
+  "themes": [
+    {
+      "theme": "Fundamentals",
+      "subthemes": [
+        {
+          "name": "Profitability",
+          "metrics": [
+            {
+              "metric": "Return on Equity (ROE)",
+              "field": "financial_data.nvda.returnOnEquity",
+              "unit": "%",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 1.15463,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Return on Assets (ROA)",
+              "field": "financial_data.nvda.returnOnAssets",
+              "unit": "%",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.53244996,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Gross Margin",
+              "field": "financial_data.nvda.grossMargins",
+              "unit": "%",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.70107,
+              "trendDescription": ""
+            },
+            {
+              "metric": "EBITDA Margin",
+              "field": "financial_data.nvda.ebitdaMargins",
+              "unit": "%",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.59419996,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Operating Margin",
+              "field": "financial_data.nvda.operatingMargins",
+              "unit": "%",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.49108002,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Net Margin",
+              "field": "financial_data.nvda.profitMargins",
+              "unit": "%",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.51694,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Return on Invested Capital (ROIC)",
+              "formula": "all_financial_data_annual[-1].EBIT * (1 - all_financial_data_annual[-1].TaxRateForCalcs) ÷ all_financial_data_annual[-1].InvestedCapital",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 0.8322666704636064,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Financial Health",
+          "metrics": [
+            {
+              "metric": "Quick Ratio",
+              "field": "financial_data.nvda.quickRatio",
+              "unit": "x",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 2.857,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Current Ratio",
+              "field": "financial_data.nvda.currentRatio",
+              "unit": "x",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 3.388,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Debt to Equity",
+              "field": "financial_data.nvda.debtToEquity",
+              "unit": "x",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 12.267,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Total Debt",
+              "field": "financial_data.nvda.totalDebt",
+              "unit": "USD",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 10284999680,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Total Cash",
+              "field": "financial_data.nvda.totalCash",
+              "unit": "USD",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 53690998784,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Net Debt",
+              "formula": "financial_data.nvda.totalDebt - financial_data.nvda.totalCash",
+              "unit": "USD",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": -43405999104,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Interest Coverage",
+              "formula": "all_financial_data_annual[-1].EBIT ÷ all_financial_data_annual[-1].InterestExpense",
+              "unit": "x",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 341.1862348178138,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Net Debt / EBITDA",
+              "formula": "all_financial_data_annual[-1].NetDebt ÷ all_financial_data_annual[-1].EBITDA",
+              "unit": "x",
+              "preferred_direction": "low",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": NaN,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Growth",
+          "metrics": [
+            {
+              "metric": "Revenue Growth (YoY)",
+              "field": "financial_data.nvda.revenueGrowth",
+              "unit": "%",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.692,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Earnings Growth (YoY)",
+              "field": "financial_data.nvda.earningsGrowth",
+              "unit": "%",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.267,
+              "trendDescription": ""
+            },
+            {
+              "metric": "5-Year Revenue CAGR",
+              "formula": "((all_financial_data_annual[-1].totalRevenue ÷ all_financial_data_annual[0].totalRevenue)^(1/4) - 1)",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": null,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Next EPS Estimate",
+              "field": "earnings_trend.nvda.trend[0].earningsEstimate.avg",
+              "unit": "USD",
+              "dataAge": "earnings_trend.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "earnings_trend"
+              ],
+              "commentary": "",
+              "latestValue": 0.9984,
+              "trendDescription": "",
+              "value": 0.9984
+            },
+            {
+              "metric": "3-Year Revenue CAGR",
+              "formula": "((all_financial_data_annual[-1].TotalRevenue ÷ all_financial_data_annual[-4].TotalRevenue)^(1/3) - 1)",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 0.6925470878444981,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Cash & Dividend",
+          "metrics": [
+            {
+              "metric": "Free Cash Flow",
+              "field": "financial_data.nvda.freeCashflow",
+              "unit": "USD",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 55443001344,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Operating Cash Flow",
+              "field": "financial_data.nvda.operatingCashflow",
+              "unit": "USD",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 76158001152,
+              "trendDescription": ""
+            },
+            {
+              "metric": "FCF Margin",
+              "formula": "financial_data.nvda.freeCashflow ÷ financial_data.nvda.operatingCashflow",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.7279996915011471,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Dividend Yield",
+              "field": "summary_detail.nvda.dividendYield",
+              "unit": "%",
+              "dataAge": "summary_detail.nvda.maxAge",
+              "preferred_direction": "high",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 0.00029999999,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Payout Ratio",
+              "field": "summary_detail.nvda.payoutRatio",
+              "unit": "%",
+              "dataAge": "summary_detail.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 0.0128999995,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Ex-Dividend Date",
+              "field": "summary_detail.nvda.exDividendDate",
+              "unit": "date",
+              "dataAge": "summary_detail.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": "2025-06-11 09:00:00",
+              "trendDescription": ""
+            },
+            {
+              "metric": "FCF Conversion (FCF/NI)",
+              "formula": "all_financial_data_annual[-1].FreeCashFlow ÷ all_financial_data_annual[-1].NetIncome",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 0.8349753018660813,
+              "trendDescription": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "Valuation",
+      "subthemes": [
+        {
+          "name": "Multiples",
+          "metrics": [
+            {
+              "metric": "Trailing P/E",
+              "field": "summary_detail.nvda.trailingPE",
+              "unit": "x",
+              "dataAge": "summary_detail.nvda.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 44.9,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Forward P/E",
+              "field": "key_stats.nvda.forwardPE",
+              "unit": "x",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 24.321926,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Price/Sales (TTM)",
+              "field": "summary_detail.nvda.priceToSalesTrailing12Months",
+              "unit": "x",
+              "dataAge": "summary_detail.nvda.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 22.856346,
+              "trendDescription": ""
+            },
+            {
+              "metric": "EV/EBITDA (TTM)",
+              "field": "key_stats.nvda.enterpriseToEbitda",
+              "unit": "x",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 37.994,
+              "trendDescription": ""
+            },
+            {
+              "metric": "EV/Revenue (TTM)",
+              "field": "key_stats.nvda.enterpriseToRevenue",
+              "unit": "x",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 22.576,
+              "trendDescription": ""
+            },
+            {
+              "metric": "EV/FCF",
+              "formula": "all_financial_data_annual[-1].EnterpriseValue ÷ all_financial_data_annual[-1].FreeCashFlow",
+              "unit": "x",
+              "preferred_direction": "low",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": 47.83151841322531,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Targets",
+          "metrics": [
+            {
+              "metric": "Analyst Target Mean",
+              "field": "financial_data.nvda.targetMeanPrice",
+              "unit": "USD",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 169.43944,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Upside to Target",
+              "formula": "(financial_data.nvda.targetMeanPrice - financial_data.nvda.currentPrice) ÷ financial_data.nvda.currentPrice",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 0.21732480781665345,
+              "trendDescription": ""
+            },
+            {
+              "metric": "# Analyst Opinions",
+              "field": "financial_data.nvda.numberOfAnalystOpinions",
+              "unit": "count",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 54,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Market Capitalization",
+              "field": "summary_detail.nvda.marketCap",
+              "unit": "USD",
+              "dataAge": "summary_detail.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 3394510258176,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Enterprise Value",
+              "field": "key_stats.nvda.enterpriseValue",
+              "unit": "USD",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 3352829886464,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Book Value per Share",
+              "field": "key_stats.nvda.bookValue",
+              "unit": "USD",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 3.438,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Price-to-Book Ratio",
+              "field": "key_stats.nvda.priceToBook",
+              "unit": "x",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 40.48575,
+              "trendDescription": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "Market & Flow",
+      "subthemes": [
+        {
+          "name": "Ownership & Insider",
+          "metrics": [
+            {
+              "metric": "Institutional Ownership %",
+              "field": "key_stats.nvda.heldPercentInstitutions",
+              "unit": "%",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 0.67482,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Insider Buys",
+              "formula": "count(insider_transactions where transactionText contains 'Purchase')",
+              "unit": "count",
+              "preferred_direction": "context",
+              "source": [
+                "insider_transactions"
+              ],
+              "commentary": "",
+              "value": 0,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Insider Sells",
+              "formula": "count(insider_transactions where transactionText contains 'Sale')",
+              "unit": "count",
+              "preferred_direction": "context",
+              "source": [
+                "insider_transactions"
+              ],
+              "commentary": "",
+              "value": 96,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Short Interest %",
+              "field": "key_stats.nvda.shortPercentOfFloat",
+              "unit": "%",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 0.0104,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Short Ratio",
+              "field": "key_stats.nvda.shortRatio",
+              "unit": "days",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 1.05,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Shares Outstanding",
+              "field": "key_stats.nvda.sharesOutstanding",
+              "unit": "count",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 24387600384,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Float Shares",
+              "field": "key_stats.nvda.floatShares",
+              "unit": "count",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 23416192000,
+              "trendDescription": ""
+            },
+            {
+              "metric": "52-Week Change %",
+              "field": "key_stats.nvda.52WeekChange",
+              "unit": "%",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 0.26959944,
+              "trendDescription": ""
+            },
+            {
+              "metric": "S&P 500 52-Week Change %",
+              "field": "key_stats.nvda.SandP52WeekChange",
+              "unit": "%",
+              "dataAge": "key_stats.nvda.maxAge",
+              "preferred_direction": "context",
+              "source": [
+                "key_stats"
+              ],
+              "commentary": "",
+              "value": 0.1202575,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Share Buyback Change (YoY)",
+              "formula": "(all_financial_data_annual[-1].RepurchaseOfCapitalStock - all_financial_data_annual[-2].RepurchaseOfCapitalStock) ÷ abs(all_financial_data_annual[-2].RepurchaseOfCapitalStock)",
+              "unit": "%",
+              "preferred_direction": "context",
+              "source": [
+                "all_financial_data_annual"
+              ],
+              "commentary": "",
+              "value": -2.5357180320990245,
+              "trendDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Sentiment & Recommendations",
+          "metrics": [
+            {
+              "metric": "Analyst Buy %",
+              "formula": "(recommendation_trend[0].strongBuy + recommendation_trend[0].buy) ÷ sum(recommendation_trend[0].*)",
+              "unit": "%",
+              "period": "recommendation_trend[0].period",
+              "preferred_direction": "high",
+              "source": [
+                "recommendation_trend"
+              ],
+              "commentary": "",
+              "value": 0.8888888888888888,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Recommendation Mean",
+              "field": "financial_data.nvda.recommendationMean",
+              "unit": "n/a",
+              "dataAge": "financial_data.nvda.maxAge",
+              "preferred_direction": "low",
+              "source": [
+                "financial_data"
+              ],
+              "commentary": "",
+              "value": 1.44444,
+              "trendDescription": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "Technical Momentum",
+      "subthemes": [
+        {
+          "name": "Moving Averages vs Price",
+          "metrics": [
+            {
+              "metric": "Price vs 50-Day MA",
+              "formula": "(financial_data.nvda.currentPrice - summary_detail.nvda.fiftyDayAverage) ÷ summary_detail.nvda.fiftyDayAverage",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data",
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 0.2014736373257004,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Price vs 200-Day MA",
+              "formula": "(financial_data.nvda.currentPrice - summary_detail.nvda.twoHundredDayAverage) ÷ summary_detail.nvda.twoHundredDayAverage",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data",
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": 0.09913192346902105,
+              "trendDescription": ""
+            },
+            {
+              "metric": "Price vs 52-Week High",
+              "formula": "(financial_data.nvda.currentPrice - summary_detail.nvda.fiftyTwoWeekHigh) ÷ summary_detail.nvda.fiftyTwoWeekHigh",
+              "unit": "%",
+              "preferred_direction": "high",
+              "source": [
+                "financial_data",
+                "summary_detail"
+              ],
+              "commentary": "",
+              "value": -0.09103376216286814,
+              "trendDescription": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

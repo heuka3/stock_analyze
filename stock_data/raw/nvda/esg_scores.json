@@ -1,0 +1,62 @@
+{
+    "nvda": {
+        "maxAge": 86400,
+        "totalEsg": 12.46,
+        "environmentScore": 2.73,
+        "socialScore": 4.08,
+        "governanceScore": 5.65,
+        "ratingYear": 2025,
+        "ratingMonth": 5,
+        "highestControversy": 2.0,
+        "peerCount": 118,
+        "esgPerformance": "LAG_PERF",
+        "peerGroup": "Semiconductors",
+        "relatedControversy": [
+            "Customer Incidents"
+        ],
+        "peerEsgScorePerformance": {
+            "min": 8.87,
+            "avg": 23.06491525423729,
+            "max": 40.69
+        },
+        "peerGovernancePerformance": {
+            "min": 2.14,
+            "avg": 5.318333333333334,
+            "max": 9.27
+        },
+        "peerSocialPerformance": {
+            "min": 2.41,
+            "avg": 5.802962962962962,
+            "max": 10.28
+        },
+        "peerEnvironmentPerformance": {
+            "min": 2.6,
+            "avg": 7.885740740740743,
+            "max": 16.95
+        },
+        "peerHighestControversyPerformance": {
+            "min": 0.0,
+            "avg": 0.5677966101694916,
+            "max": 3.0
+        },
+        "percentile": null,
+        "environmentPercentile": null,
+        "socialPercentile": null,
+        "governancePercentile": null,
+        "adult": false,
+        "alcoholic": false,
+        "animalTesting": false,
+        "catholic": null,
+        "controversialWeapons": false,
+        "smallArms": false,
+        "furLeather": false,
+        "gambling": false,
+        "gmo": false,
+        "militaryContract": false,
+        "nuclear": false,
+        "pesticides": false,
+        "palmOil": false,
+        "coal": false,
+        "tobacco": false
+    }
+}

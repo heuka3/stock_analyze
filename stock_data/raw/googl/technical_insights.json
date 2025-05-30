@@ -1,0 +1,89 @@
+{
+    "googl": {
+        "symbol": "googl",
+        "instrumentInfo": {
+            "technicalEvents": {
+                "provider": "Trading Central",
+                "sector": "Communication Services",
+                "shortTermOutlook": {
+                    "stateDescription": "Recent bullish events outweigh bearish events.",
+                    "direction": "Bullish",
+                    "score": 4,
+                    "scoreDescription": "Very Strong Bullish Evidence",
+                    "sectorDirection": "Bearish",
+                    "sectorScore": 1,
+                    "sectorScoreDescription": "Weak Bearish Evidence",
+                    "indexDirection": "Bullish",
+                    "indexScore": 2,
+                    "indexScoreDescription": "Bullish Evidence"
+                },
+                "intermediateTermOutlook": {
+                    "stateDescription": "Recent bullish events outweigh bearish events.",
+                    "direction": "Bullish",
+                    "score": 2,
+                    "scoreDescription": "Bullish Evidence",
+                    "sectorDirection": "Bullish",
+                    "sectorScore": 2,
+                    "sectorScoreDescription": "Bullish Evidence",
+                    "indexDirection": "Bullish",
+                    "indexScore": 3,
+                    "indexScoreDescription": "Strong Bullish Evidence"
+                },
+                "longTermOutlook": {
+                    "stateDescription": "All events are bearish.",
+                    "direction": "Bearish",
+                    "score": 3,
+                    "scoreDescription": "Strong Bearish Evidence",
+                    "sectorDirection": "Bullish",
+                    "sectorScore": 3,
+                    "sectorScoreDescription": "Strong Bullish Evidence",
+                    "indexDirection": "Bullish",
+                    "indexScore": 2,
+                    "indexScoreDescription": "Bullish Evidence"
+                }
+            },
+            "keyTechnicals": {
+                "provider": "Trading Central",
+                "support": 163.86,
+                "resistance": 175.115,
+                "stopLoss": 153.473225
+            },
+            "valuation": {
+                "color": 0.5,
+                "description": "Near Fair Value",
+                "discount": "12%",
+                "provider": "Trading Central"
+            }
+        },
+        "companySnapshot": {
+            "sectorInfo": "Communication Services",
+            "company": {
+                "innovativeness": 0.982,
+                "hiring": 0.8592,
+                "sustainability": 0.7878000000000001,
+                "insiderSentiments": 0.2373,
+                "earningsReports": 0.8895000000000001,
+                "dividends": 0.038
+            },
+            "sector": {
+                "innovativeness": 0.5,
+                "hiring": 0.5,
+                "sustainability": 0.5,
+                "insiderSentiments": 0.5,
+                "earningsReports": 0.5,
+                "dividends": 0.5
+            }
+        },
+        "recommendation": {
+            "targetPrice": 220.0,
+            "provider": "Argus Research",
+            "rating": "BUY"
+        },
+        "sigDevs": [
+            {
+                "headline": "Google Announces Anthropic's Claude Opus 4 & Claude Sonnet 4 On Vertex AI",
+                "date": "2025-05-22"
+            }
+        ]
+    }
+}
