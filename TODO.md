@@ -13,12 +13,13 @@
 
 - 마크다운 파일 함 다시 만들어보고 이 마크다운 파일 및 template.json기반으로 어떤식으로 대화 흐름을 짤지 gpt랑 논의해보기
 
-## In Process
-
 - controlflow.py & generate_dialogue.py 수정: 
 무조건 각 세그먼트의 한 파일만 처리하게끔, 세그먼트 내에서는 대화내역 쌓아서 계속 전달하게끔(출력된 txt파일을 보도록 하게하자)
 프롬프트 짤 때 파일 경로를 명확하게 명시하고(코드 내부에서) 파일 경로 강조하기
 tts 부분 어떤 파일 처리중인지 그 인자 확인해서 목소리 다르게 / 목소리 선택하기
+get_current_segment_history함수 코드리뷰해보기: 이전 flow를 잘 불러오는지 확인, 해당 segment의 파일만 불러오는지 확인.
+
+## In Process
 
 - 병렬처리 개선(generate_dialogue -> tts.py)
 

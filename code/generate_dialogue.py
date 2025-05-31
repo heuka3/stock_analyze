@@ -197,14 +197,17 @@ def generate_intro_script(ticker_symbol: str, company_name: str) -> str:
     
     # 사회자 인트로 프롬프트 생성
     prompt = f"""
-당신은 주식 투자 분석 토의회의 전문 진행자입니다. '{company_name}' (티커: {ticker_symbol}) 주식에 대한 심층 분석 토의회를 시작하는 인트로 대본을 작성해주세요.
+당신은 주식 투자 분석 토의회의 전문 진행자입니다. '{company_name}' (티커: {ticker_symbol}) 주식에 대한 심층 분석 토의회를 시작해주세요.
+
+## 주의 사항: 
+-아래의 발언 순서에 따라 진행해주세요.
 
 ## 토의회 구성:
 - **진행자**: 객관적이고 균형잡힌 토의 진행
 - **낙관적 관점 분석가**: {company_name}의 투자 매력과 긍정적 요소에 주목
 - **신중한 관점 분석가**: 리스크와 주의사항, 개선이 필요한 부분에 집중
 
-## 대본 구성:
+## 발언 순서:
 1. **인사 및 토의회 소개** (1분)
    - 청중들에게 따뜻한 인사
    - 오늘의 토의 주제: {company_name} 투자 가치 심층 분석
@@ -462,73 +465,91 @@ def create_dialogue_prompt(ticker_symbol: str, company_name: str, segment_info: 
     perspective = "긍정적" if speaker == "optimistic" else "신중한" if speaker == "pessimistic" else "중립적"
     template_data = positive_template if speaker == "optimistic" else negative_template
     
-    # 스크립트 타입별 역할 설명
+    # 역할 및 상황 설정
+    if speaker == "optimistic":
+        speaker_identity = "당신은 이 토의회의 낙관적 관점 투자 분석가입니다"
+        viewpoint_desc = "투자 기회와 성장 가능성에 주목하는"
+    elif speaker == "pessimistic":
+        speaker_identity = "당신은 이 토의회의 신중한 관점 투자 분석가입니다"
+        viewpoint_desc = "리스크와 주의사항을 면밀히 검토하는"
+    else:  # moderator
+        speaker_identity = "당신은 이 토의회의 중립적 진행자입니다"
+        viewpoint_desc = "균형잡힌 시각으로 토의를 정리하는"
+    
+    # 현재 발언 상황 설정
     if script_type == "development":
-        role_desc = f"{perspective} 관점에서 {segment_info['topic']}에 대한 심층 분석을 발전시키는"
+        action_desc = f"지금은 {segment_info['topic']}에 대해 당신의 {perspective} 관점에서 심층 분석을 제시할 차례입니다"
     elif script_type == "response":
-        role_desc = f"상대방의 분석에 대해 {perspective} 관점에서 응답하고 보완하는"
+        action_desc = f"상대 분석가의 의견을 들은 후, {perspective} 관점에서 응답하고 추가 통찰을 제공할 차례입니다"
     else:  # summary
-        role_desc = "양쪽 분석가의 의견을 종합하고 균형잡힌 시각으로 정리하는"
+        action_desc = "양쪽 분석가의 의견을 종합하여 이 주제에 대한 균형잡힌 정리를 할 차례입니다"
     
     prompt = f"""
-## 주식 투자 분석 토의회 대본 생성
+## 주식 투자 분석 토의회 상황
 
-### 기본 정보
-- **회사**: {company_name} (티커: {ticker_symbol.upper()})
-- **세그먼트**: {segment_info['segment']}
-- **주제**: {segment_info['topic']}
-- **분야**: {segment_info['field']}
+### 토의 배경
+{company_name} (티커: {ticker_symbol.upper()})에 대한 투자 분석 토의회가 진행 중입니다.
+현재 주제는 "{segment_info['segment']}"이며, 구체적으로 {segment_info['topic']}에 대해 논의하고 있습니다.
 
-### 현재 역할
-- **스피커**: {speaker} ({perspective} 분석가)
-- **스크립트 타입**: {script_type}
-- **역할**: {role_desc}
+### 당신의 정체성과 역할
+{speaker_identity}. 당신은 {viewpoint_desc} 전문가로서, 철저한 데이터 분석을 바탕으로 깊이 있는 투자 통찰을 제공합니다.
 
-### 대화 맥락
+### 현재 상황
+{action_desc}.
 """
 
-    # 이전 대화 히스토리 추가
+    # 이전 대화 맥락 추가
     if dialogue_history.strip():
         prompt += f"""
-#### 이전 세그먼트들의 대화 요약:
-{dialogue_history[:2000]}...  # 너무 길면 제한
+### 이전 토의 내용 요약
+앞서 진행된 세그먼트들에서 다음과 같은 논의가 있었습니다:
+{dialogue_history}
+
+이러한 맥락을 고려하여 현재 주제와의 연관성을 언급하며 토의를 이어가주세요.
 """
 
-    # 현재 세그먼트 히스토리 추가
+    # 현재 세그먼트 대화 흐름 추가
     if current_segment_history.strip():
         prompt += f"""
-#### 현재 세그먼트에서의 대화 흐름:
+### 현재 주제에서의 대화 흐름
+이번 주제에 대해 지금까지 다음과 같은 논의가 진행되었습니다:
 {current_segment_history}
+
+이 대화의 흐름을 이어받아 자연스럽게 당신의 발언을 시작해주세요.
 """
 
-    # 관련 데이터 컨텍스트 추가
+    # 분석 근거 자료 제공
     if markdown_context.strip():
         prompt += f"""
-### 관련 재무/시장 데이터
-{markdown_context[:3000]}...  # 너무 길면 제한
+### 분석 근거 자료
+다음은 현재 논의중인 {segment_info['topic']}에 관련된 {company_name}의 데이터입니다.
+{markdown_context}
+
+이 데이터를 꼼꼼히 분석하여 구체적인 수치와 사실을 바탕으로 논증해주세요.
 """
 
-    # JSON 템플릿 컨텍스트 추가
+    # 관점별 가이드라인 제공
     if template_data:
         prompt += f"""
-### {perspective} 관점 분석 가이드라인
+### {perspective} 관점 분석 포인트
+당신의 {perspective} 관점에서 주목해야 할 핵심 분석 요소들:
 {json.dumps(template_data, ensure_ascii=False, indent=2)}
+
+이러한 포인트들을 참고하여 당신만의 독창적인 분석을 펼쳐주세요.
 """
 
     prompt += f"""
-### 대본 작성 요구사항
-1. **전문성**: 구체적인 수치와 데이터 기반의 분석
-2. **자연스러움**: 실제 토의회처럼 자연스러운 대화체
-3. **교육적 가치**: 투자자들이 배울 수 있는 실질적 통찰
-4. **상호 존중**: 다른 관점을 인정하면서도 자신의 견해를 명확히 제시
-5. **적절한 분량**: 2-3분 분량의 충실한 내용
+### 토의 참여 요청사항
+1. **전문성 발휘**: 제공된 실제 데이터와 수치를 인용하며 구체적으로 분석해주세요
+2. **자연스러운 대화**: 상대방과 진행자를 의식하며 자연스럽게 발언해주세요
+3. **깊이 있는 통찰**: 단순한 사실 나열이 아닌 투자자들에게 도움이 되는 해석과 통찰을 제공해주세요
+4. **균형잡힌 시각**: 상대방의 관점에서 타당한 부분이 있다면 먼저 인정하고, 그 위에서 당신의 견해를 보완적으로 제시해주세요
+5. **협력적 토의**: 이 토의의 목표는 승부가 아니라 함께 더 깊은 투자 통찰을 얻는 것임을 기억해주세요
+6. **상호 존중**: 다른 관점도 존중하며 "~한 측면에서는 맞지만" 또는 "그 부분은 인정하면서도" 같은 표현으로 자연스럽게 연결해주세요
+7. **맥락 연결**: 앞선 논의와 자연스럽게 연결되는 발언을 해주세요
 
-### 분석 포인트
-- {segment_info['topic']}에 집중한 심층 분석
-- 제공된 데이터와 템플릿을 활용한 구체적 근거 제시
-- 투자 의사결정에 도움이 되는 실용적 관점
-
-자연스럽고 전문적인 대본을 작성해주세요.
+이제 {company_name}의 {segment_info['topic']}에 대해 당신의 전문적인 견해를 열정적으로 개진해주세요. 
+상대방과 함께 더 나은 투자 판단을 위한 통찰을 만들어가는 협력적 토의를 진행해주시기 바랍니다.
 """
 
     return prompt
@@ -536,35 +557,61 @@ def create_dialogue_prompt(ticker_symbol: str, company_name: str, segment_info: 
 def create_speaker_instruction(speaker: str, script_type: str, segment_info: dict) -> str:
     """스피커별 인스트럭션 생성"""
     
+    # 기본 토의 참여 지침
     base_instruction = """
-당신은 주식 투자 분석 토의회의 전문 대본 작가입니다.
-다음 사항을 준수하여 대본을 작성해주세요:
+당신은 주식 투자 분석 토의회에 참여한 전문 분석가입니다.
+다음 지침에 따라 토의에 참여해주세요:
 
-1. 마크다운 코드 블록이나 추가 설명 없이 자연스러운 대본만 작성
-2. 구체적인 수치와 데이터를 활용한 분석
-3. 상대방을 존중하면서도 명확한 견해 표현
-4. 투자 초보자도 이해할 수 있는 설명
-5. 2-3분 분량의 충실한 내용
+1. 실제 토의 상황에 참여한 것처럼 자연스럽고 열정적으로 발언하세요
+2. 제공된 실제 데이터와 구체적 수치를 인용하며 논증하세요
+3. 상대방의 관점을 존중하면서도 당신의 견해를 명확히 표현하세요
+4. 투자 초보자도 이해할 수 있도록 명확하고 교육적으로 설명하세요
+5. 3-4분 분량의 충실하고 깊이 있는 발언을 해주세요
 """
 
+    # 역할별 구체적 지침
     if speaker == "optimistic":
-        return base_instruction + """
-6. 긍정적 관점에서 투자 기회와 강점에 집중
-7. 데이터의 밝은 면과 성장 가능성 강조
-8. 낙관적이지만 근거 있는 분석 제시
+        role_specific = """
+### 당신의 역할: 낙관적 관점 투자 분석가
+- 투자 기회와 성장 가능성에 주목하는 전문가입니다
+- 데이터에서 긍정적 신호와 강점을 발견하여 설득력 있게 제시하세요
+- 희망적이지만 근거 있는 분석으로 투자 매력을 부각시키세요
+- 상대방이 제기하는 리스크나 우려사항 중 타당한 부분이 있다면 먼저 인정하고, 그럼에도 불구하고 긍정적으로 볼 수 있는 요소들을 보완적으로 설명하세요
 """
+        
+        if script_type == "development":
+            role_specific += "- 지금은 당신이 주도적으로 긍정적 분석을 전개할 차례입니다"
+        elif script_type == "response":
+            role_specific += "- 신중한 관점 분석가의 우려에 대해 긍정적 시각으로 반박하거나 보완할 차례입니다"
+        else:
+            role_specific += "- 토의 내용을 긍정적 관점에서 요약하며 투자 기회를 강조할 차례입니다"
+            
     elif speaker == "pessimistic":
-        return base_instruction + """
-6. 신중한 관점에서 리스크와 주의사항에 집중
-7. 데이터의 우려스러운 면과 개선 필요사항 강조
-8. 보수적이지만 건설적인 분석 제시
+        role_specific = """
+### 당신의 역할: 신중한 관점 투자 분석가  
+- 리스크와 주의사항을 면밀히 검토하는 전문가입니다
+- 데이터에서 우려스러운 요소와 개선 필요사항을 발견하여 제시하세요
+- 보수적이지만 건설적인 분석으로 투자 위험을 명확히 하세요
+- 상대방이 제시하는 긍정적 요소들 중 타당한 부분이 있다면 먼저 인정하고, 그럼에도 불구하고 주의 깊게 살펴봐야 할 리스크들을 보완적으로 설명하세요
 """
+        
+        if script_type == "development":
+            role_specific += "- 지금은 당신이 주도적으로 신중한 분석을 전개할 차례입니다"
+        elif script_type == "response":
+            role_specific += "- 낙관적 관점 분석가의 의견에 대해 신중한 시각으로 반박하거나 보완할 차례입니다"
+        else:
+            role_specific += "- 토의 내용을 신중한 관점에서 요약하며 주의사항을 강조할 차례입니다"
+            
     else:  # moderator
-        return base_instruction + """
-6. 중립적 관점에서 양쪽 의견을 균형있게 정리
-7. 투자자들이 다양한 관점을 이해할 수 있도록 도움
-8. 객관적이고 교육적인 요약 제시
+        role_specific = """
+### 당신의 역할: 중립적 토의 진행자
+- 균형잡힌 시각으로 토의를 조율하고 정리하는 전문가입니다  
+- 양쪽 분석가의 의견을 공정하게 종합하여 통찰을 제공하세요
+- 객관적이고 교육적인 관점으로 투자자들을 안내하세요
+- 지금은 양쪽 의견을 균형있게 정리하고 핵심 포인트를 요약할 차례입니다
 """
+
+    return base_instruction + "\n" + role_specific
 
 def main():
     """메인 함수 - command line 인자 처리"""
