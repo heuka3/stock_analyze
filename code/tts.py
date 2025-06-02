@@ -192,30 +192,26 @@ def generate_speech(text: str, voice: str, output_path: str, instruction: str = 
         print(f"  🎭 instruction: {instruction[:50]}..." if len(instruction) > 50 else f"  🎭 instruction: {instruction}")
         print(f"  📁 출력: {output_path}")
         
-        # OpenAI TTS API 호출 파라미터 구성
-        tts_params = {
-            "model": "tts-1",
-            "voice": voice,
-            "input": text,
-            "response_format": "mp3"
-        }
-        
-        # instruction이 있으면 추가 (OpenAI TTS API에서 지원하는 경우)
-        if instruction:
-            # 참고: 현재 OpenAI TTS API는 instruction 파라미터를 공식적으로 지원하지 않으므로
-            # 텍스트에 톤 가이드를 추가하는 방식으로 처리
-            guided_text = f"[{instruction}]\n\n{text}"
-            tts_params["input"] = guided_text
-        
-        response = client.audio.speech.create(**tts_params)
-        
         # 출력 디렉토리 생성
         output_dir = Path(output_path).parent
         output_dir.mkdir(parents=True, exist_ok=True)
         
-        # 음성 파일 저장
-        with open(output_path, 'wb') as f:
-            f.write(response.content)
+        # OpenAI TTS API 호출 (gpt-4o-mini-tts 모델은 instruction 파라미터 지원)
+        speech_file_path = Path(output_path)
+        
+        # API 호출 파라미터 구성
+        api_params = {
+            "model": "gpt-4o-mini-tts",
+            "voice": voice,
+            "input": text
+        }
+        
+        # # instruction이 있으면 파라미터에 추가.. 왜인지는 모르겠으나 instruction이 있으면 안 되는 듯...?
+        # if instruction:
+        #     api_params["instruction"] = instruction
+        
+        with client.audio.speech.with_streaming_response.create(**api_params) as response:
+            response.stream_to_file(speech_file_path)
         
         print(f"✅ TTS 생성 완료: {output_path}")
         return True

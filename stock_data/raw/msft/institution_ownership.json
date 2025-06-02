@@ -5,7 +5,7 @@
         "organization": "Vanguard Group Inc",
         "pctHeld": 0.093,
         "position": 691386214,
-        "value": 317125023573,
+        "value": 318286547349,
         "pctChange": 0.0107
     },
     {
@@ -14,7 +14,7 @@
         "organization": "Blackrock Inc.",
         "pctHeld": 0.0785,
         "position": 583284931,
-        "value": 267541127878,
+        "value": 268521042290,
         "pctChange": 0.012200001
     },
     {
@@ -23,7 +23,7 @@
         "organization": "State Street Corporation",
         "pctHeld": 0.0398,
         "position": 296030244,
-        "value": 135783150149,
+        "value": 136280478791,
         "pctChange": 0.0031
     },
     {
@@ -32,7 +32,7 @@
         "organization": "FMR, LLC",
         "pctHeld": 0.026199998,
         "position": 194591253,
-        "value": 89255114500,
+        "value": 89582026380,
         "pctChange": -0.0148
     },
     {
@@ -41,7 +41,7 @@
         "organization": "Geode Capital Management, LLC",
         "pctHeld": 0.023599999,
         "position": 175469697,
-        "value": 80484439334,
+        "value": 80779227140,
         "pctChange": 0.0437
     },
     {
@@ -50,7 +50,7 @@
         "organization": "JPMORGAN CHASE & CO",
         "pctHeld": 0.0191,
         "position": 142009968,
-        "value": 65137131082,
+        "value": 65375706788,
         "pctChange": 0.052399997
     },
     {
@@ -59,7 +59,7 @@
         "organization": "Price (T.Rowe) Associates Inc",
         "pctHeld": 0.0177,
         "position": 131514660,
-        "value": 60323143285,
+        "value": 60544086951,
         "pctChange": -0.0269
     },
     {
@@ -68,7 +68,7 @@
         "organization": "Morgan Stanley",
         "pctHeld": 0.0167,
         "position": 123846555,
-        "value": 56805936940,
+        "value": 57013998245,
         "pctChange": -0.013200001
     },
     {
@@ -77,7 +77,7 @@
         "organization": "NORGES BANK",
         "pctHeld": 0.014199999,
         "position": 105202984,
-        "value": 48254503930,
+        "value": 48431244173,
         "pctChange": 0.0838
     },
     {
@@ -86,7 +86,7 @@
         "organization": "Northern Trust Corporation",
         "pctHeld": 0.0111,
         "position": 82539834,
-        "value": 37859370454,
+        "value": 37998036771,
         "pctChange": -0.0149
     }
 ]

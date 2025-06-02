@@ -1,12 +1,12 @@
 {
     "googl": {
         "maxAge": 86400,
-        "currentPrice": 168.47,
+        "currentPrice": 171.74,
         "targetHighPrice": 250.0,
         "targetLowPrice": 160.0,
         "targetMeanPrice": 201.4652,
         "targetMedianPrice": 200.0,
-        "recommendationMean": 1.57353,
+        "recommendationMean": 1.58824,
         "recommendationKey": "buy",
         "numberOfAnalystOpinions": 52,
         "totalCash": 95328002048,

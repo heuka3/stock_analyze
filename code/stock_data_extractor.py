@@ -10,8 +10,181 @@ from IPython.display import display, HTML
 import yahooquery as yq
 from yahooquery import Ticker
 from datetime import datetime, timedelta
+import requests
+import random
 
 def retry_function(func, *args, method_name="", max_attempts=3, **kwargs):
+    """
+    지정된 함수를 최대 시도 횟수만큼 재시도하는 함수
+    
+    Args:
+        func: 재시도할 함수
+        *args: 함수에 전달할 위치 인자
+        method_name: 현재 시도하는 메서드 이름 (로깅용)
+        max_attempts: 최대 시도 횟수
+        **kwargs: 함수에 전달할 키워드 인자
+        
+    Returns:
+        함수 실행 결과
+        
+    Raises:
+        Exception: 최대 시도 횟수를 초과해도 성공하지 못한 경우
+    """
+    attempt = 1
+    last_exception = None
+    
+    while attempt <= max_attempts:
+        try:
+            if method_name:
+                print(f"{method_name} 조회 시도 중... (시도 {attempt}/{max_attempts})", flush=True)
+            result = func(*args, **kwargs)
+            if method_name:
+                print(f"{method_name} 조회 성공!", flush=True)
+            return result
+        except Exception as e:
+            last_exception = e
+            if method_name:
+                print(f"{method_name} 조회 실패 (시도 {attempt}/{max_attempts}): {e}", flush=True)
+            if attempt == max_attempts:
+                break
+            attempt += 1
+            # 재시도 전 잠시 대기
+            time.sleep(2)
+    
+    # 모든 시도 실패
+    if last_exception:
+        raise last_exception
+    else:
+        raise Exception(f"{method_name} 조회 실패")
+
+
+def create_ticker_safely(ticker_symbol, max_attempts=5):
+    """
+    안전하게 티커 객체를 생성하는 함수
+    
+    Args:
+        ticker_symbol: 티커 심볼
+        max_attempts: 최대 시도 횟수
+        
+    Returns:
+        Ticker: 생성된 티커 객체
+        
+    Raises:
+        Exception: 최대 시도 후에도 실패한 경우
+    """
+    attempt = 1
+    last_exception = None
+    
+    while attempt <= max_attempts:
+        try:
+            print(f"티커 객체 생성 시도 중... (시도 {attempt}/{max_attempts})", flush=True)
+            
+            # 세션 초기화를 위한 약간의 지연
+            if attempt > 1:
+                delay = random.uniform(5, 15) * attempt  # 더 긴 점진적 백오프
+                print(f"재시도 전 {delay:.1f}초 대기...", flush=True)
+                time.sleep(delay)
+            
+            # 티커 객체 생성 (강제 새 세션)
+            ticker = Ticker(ticker_symbol.lower())
+            
+            # 즉시 검증하지 말고 잠시 대기
+            time.sleep(0.5)
+            
+            # 단계별 검증
+            print(f"티커 객체 생성됨, 유효성 검증 중...", flush=True)
+            
+            # 1. 심볼 리스트 확인 (재시도 포함)
+            symbols = None
+            for validation_attempt in range(3):
+                try:
+                    symbols = ticker.symbols
+                    if symbols and len(symbols) > 0:
+                        break
+                    time.sleep(0.5)
+                except:
+                    if validation_attempt == 2:
+                        raise
+                    time.sleep(1)
+            
+            if not symbols or len(symbols) == 0:
+                raise ValueError(f"티커 '{ticker_symbol}'에 대한 심볼을 찾을 수 없습니다.")
+            
+            # 2. 요청한 심볼이 실제로 포함되어 있는지 확인
+            ticker_upper = ticker_symbol.upper()
+            ticker_lower = ticker_symbol.lower()
+            if ticker_upper not in symbols and ticker_lower not in symbols:
+                raise ValueError(f"요청한 심볼 '{ticker_symbol}'이 결과에 포함되지 않았습니다. 사용 가능한 심볼: {symbols}")
+            
+            # 실제 사용할 심볼 결정 (symbols에 포함된 형태 사용)
+            actual_symbol = ticker_upper if ticker_upper in symbols else ticker_lower
+            
+            # 3. 기본 데이터 접근 시도 (가장 가벼운 데이터로 검증)
+            price_data = None
+            for validation_attempt in range(3):
+                try:
+                    price_data = ticker.price
+                    if price_data and actual_symbol in price_data:
+                        break
+                    time.sleep(0.5)
+                except:
+                    if validation_attempt == 2:
+                        raise
+                    time.sleep(1)
+            
+            if not price_data or actual_symbol not in price_data:
+                raise ValueError(f"티커 '{ticker_symbol}'의 가격 정보를 가져올 수 없습니다.")
+            
+            # 기본적인 가격 정보가 있는지 확인
+            ticker_price_info = price_data[actual_symbol]
+            if not ticker_price_info:
+                raise ValueError(f"티커 '{ticker_symbol}'의 가격 정보가 비어있습니다.")
+            
+            # 성공적으로 검증 완료
+            current_price = ticker_price_info.get('regularMarketPrice', 'N/A')
+            print(f"티커 객체 검증 성공! 현재 가격: ${current_price}", flush=True)
+            return ticker
+            
+        except Exception as e:
+            last_exception = e
+            print(f"티커 객체 생성/검증 실패 (시도 {attempt}/{max_attempts}): {e}", flush=True)
+            
+            # 마지막 시도가 아니면 계속
+            if attempt < max_attempts:
+                attempt += 1
+                continue
+            else:
+                break
+    
+    # 모든 시도 실패
+    print(f"최대 시도 횟수({max_attempts}회)를 초과했습니다.", flush=True)
+    if last_exception:
+        raise last_exception
+    else:
+        raise Exception(f"티커 '{ticker_symbol}' 객체 생성에 실패했습니다.")
+
+
+def check_network_connection():
+    """
+    네트워크 연결 상태를 확인하는 함수
+    """
+    try:
+        # Yahoo Finance 도메인 연결 테스트
+        response = requests.get("https://finance.yahoo.com", timeout=10)
+        if response.status_code == 200:
+            print("네트워크 연결 상태: 정상", flush=True)
+            return True
+        elif response.status_code == 429:
+            print(f"네트워크 연결 상태: API 제한 (상태코드: {response.status_code})", flush=True)
+            print("⏰ Yahoo Finance API 제한이 걸렸습니다. 30초 대기 후 계속 진행합니다...", flush=True)
+            time.sleep(30)
+            return True  # 대기 후 계속 진행
+        else:
+            print(f"네트워크 연결 상태: 불안정 (상태코드: {response.status_code})", flush=True)
+            return False
+    except Exception as e:
+        print(f"네트워크 연결 상태: 실패 ({e})", flush=True)
+        return False
     """
     지정된 함수를 최대 시도 횟수만큼 재시도하는 함수
     
@@ -111,73 +284,21 @@ def extract_stock_data(ticker_symbol):
     """
     print(f"{ticker_symbol} 데이터 추출 시작...", flush=True)
     
-    # 티커 객체 생성 - 최대 3번 재시도
-    max_attempts = 3
-    attempt = 1
-    ticker = None
+    # 네트워크 연결 상태 확인
+    if not check_network_connection():
+        print("⚠️ 네트워크 연결이 불안정합니다. 그래도 시도해보겠습니다...", flush=True)
+        time.sleep(2)
     
-    while attempt <= max_attempts:
-        try:
-            print(f"티커 객체 생성 시도 중... (시도 {attempt}/{max_attempts})", flush=True)
-            ticker = Ticker(ticker_symbol.lower())
-            
-            # 티커가 제대로 생성되었는지 더 엄밀하게 검증
-            print(f"티커 객체 생성됨, 유효성 검증 중...", flush=True)
-            
-            # 1. 심볼 리스트 확인
-            symbols = ticker.symbols
-            if not symbols or len(symbols) == 0:
-                raise ValueError(f"티커 '{ticker_symbol}'에 대한 심볼을 찾을 수 없습니다.")
-            
-            # 2. 요청한 심볼이 실제로 포함되어 있는지 확인
-            ticker_upper = ticker_symbol.upper()
-            if ticker_upper not in symbols:
-                raise ValueError(f"요청한 심볼 '{ticker_upper}'이 결과에 포함되지 않았습니다. 사용 가능한 심볼: {symbols}")
-            
-            # 3. 기본 데이터에 접근해서 실제로 데이터가 있는지 확인
-            try:
-                price_data = ticker.price
-                if not price_data or ticker_upper not in price_data:
-                    raise ValueError(f"티커 '{ticker_symbol}'의 가격 정보를 가져올 수 없습니다.")
-                
-                # 기본적인 가격 정보가 있는지 확인
-                ticker_price_info = price_data[ticker_upper]
-                if not ticker_price_info or 'regularMarketPrice' not in ticker_price_info:
-                    raise ValueError(f"티커 '{ticker_symbol}'의 시장 가격 정보가 누락되었습니다.")
-                
-                print(f"티커 객체 검증 성공! 현재 가격: ${ticker_price_info.get('regularMarketPrice', 'N/A')}", flush=True)
-                
-            except Exception as validation_error:
-                raise ValueError(f"티커 데이터 검증 실패: {validation_error}")
-            
-            print(f"티커 객체 생성 및 검증 완료!", flush=True)
-            break
-            
-        except Exception as e:
-            print(f"티커 객체 생성/검증 실패 (시도 {attempt}/{max_attempts}): {e}", flush=True)
-            if attempt == max_attempts:
-                print(f"최대 시도 횟수({max_attempts}회)를 초과했습니다. 프로그램을 종료합니다.", flush=True)
-                sys.exit(1)
-            attempt += 1
-            # 재시도 전 잠시 대기 (점진적 증가)
-            wait_time = 2 * attempt
-            print(f"{wait_time}초 대기 후 재시도합니다...", flush=True)
-            time.sleep(wait_time)
-    
-    # 티커 객체가 없으면 종료 (위에서 이미 처리되긴 함)
-    if ticker is None:
-        print("티커 객체 생성에 실패했습니다. 프로그램을 종료합니다.", flush=True)
-        sys.exit(1)
-    
-    # 최종 검증: 데이터 추출 전 한 번 더 확인
+    # 안전한 티커 객체 생성
     try:
-        final_symbols = ticker.symbols
-        if not final_symbols or ticker_symbol.upper() not in final_symbols:
-            print(f"최종 검증 실패: 티커 '{ticker_symbol}' 심볼이 유효하지 않습니다.", flush=True)
-            sys.exit(1)
-        print(f"최종 검증 완료. 데이터 추출을 시작합니다...", flush=True)
+        ticker = create_ticker_safely(ticker_symbol, max_attempts=5)
+        print(f"✅ 티커 객체 생성 및 검증 완료!", flush=True)
     except Exception as e:
-        print(f"최종 검증 중 오류 발생: {e}", flush=True)
+        print(f"❌ 티커 객체 생성 최종 실패: {e}", flush=True)
+        print("💡 해결 방법:", flush=True)
+        print("   1. 인터넷 연결을 확인해주세요", flush=True)
+        print("   2. 몇 분 후 다시 시도해주세요", flush=True)
+        print("   3. 티커 심볼이 올바른지 확인해주세요", flush=True)
         sys.exit(1)
     
     # 1.1 자산 프로필 (회사 정보)
@@ -364,11 +485,36 @@ def extract_stock_data(ticker_symbol):
     # 5.4 내부자 보유 현황
     # 경영진, 이사 등 내부자들의 주식 보유 현황 정보를 제공
     try:
-        insider_holders = retry_function(
-            lambda: ticker.insider_holders, method_name="내부자 보유 현황"
+        insider_roster_holders = retry_function(
+            lambda: ticker.insider_roster_holders, method_name="내부자 보유 현황"
         )
         print("내부자 보유 현황 조회 성공", flush=True)
-        save_to_json(insider_holders, ticker_symbol, "insider_holders")
+        save_to_json(insider_roster_holders, ticker_symbol, "insider_roster_holders")
+    except Exception as e:
+        print(f"내부자 보유 현황 조회 최종 실패: {e}")
+    
+    # 6.1 ESG 점수
+    # 환경(E), 사회(S), 지배구조(G) 관련 기업의 지속가능성 평가 점수 정보를 제공
+    try:
+        esg_scores = retry_function(
+            lambda: ticker.esg_scores, method_name="ESG 점수"
+        )
+        print("ESG 점수 조회 성공", flush=True)
+        save_to_json(esg_scores, ticker_symbol, "esg_scores")
+    except Exception as e:
+        print(f"ESG 점수 조회 최종 실패: {e}")
+        save_to_json(insider_transactions, ticker_symbol, "insider_transactions")
+    except Exception as e:
+        print(f"내부자 거래 조회 최종 실패: {e}")
+    
+    # 5.4 내부자 보유 현황
+    # 경영진, 이사 등 내부자들의 주식 보유 현황 정보를 제공
+    try:
+        insider_roster_holders = retry_function(
+            lambda: ticker.insider_roster_holders, method_name="내부자 보유 현황"
+        )
+        print("내부자 보유 현황 조회 성공", flush=True)
+        save_to_json(insider_roster_holders, ticker_symbol, "insider_roster_holders")
     except Exception as e:
         print(f"내부자 보유 현황 조회 최종 실패: {e}")
     

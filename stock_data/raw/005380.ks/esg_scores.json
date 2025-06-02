@@ -1,0 +1,64 @@
+{
+    "005380.ks": {
+        "maxAge": 86400,
+        "totalEsg": 28.31,
+        "environmentScore": 8.32,
+        "socialScore": 10.8,
+        "governanceScore": 9.18,
+        "ratingYear": 2023,
+        "ratingMonth": 9,
+        "highestControversy": 3.0,
+        "peerCount": 37,
+        "esgPerformance": "AVG_PERF",
+        "peerGroup": "Automobiles",
+        "relatedControversy": [
+            "Product & Service Incidents",
+            "Employee Incidents",
+            "Customer Incidents"
+        ],
+        "peerEsgScorePerformance": {
+            "min": 12.18,
+            "avg": 25.234324324324326,
+            "max": 37.9
+        },
+        "peerGovernancePerformance": {
+            "min": 5.73,
+            "avg": 8.134054054054054,
+            "max": 11.24
+        },
+        "peerSocialPerformance": {
+            "min": 3.28,
+            "avg": 10.213783783783784,
+            "max": 17.95
+        },
+        "peerEnvironmentPerformance": {
+            "min": 2.13,
+            "avg": 6.886216216216217,
+            "max": 12.06
+        },
+        "peerHighestControversyPerformance": {
+            "min": 0.0,
+            "avg": 2.324324324324324,
+            "max": 4.0
+        },
+        "percentile": 62.31,
+        "environmentPercentile": null,
+        "socialPercentile": null,
+        "governancePercentile": null,
+        "adult": false,
+        "alcoholic": false,
+        "animalTesting": false,
+        "catholic": false,
+        "controversialWeapons": false,
+        "smallArms": false,
+        "furLeather": false,
+        "gambling": false,
+        "gmo": false,
+        "militaryContract": false,
+        "nuclear": false,
+        "pesticides": false,
+        "palmOil": false,
+        "coal": false,
+        "tobacco": false
+    }
+}

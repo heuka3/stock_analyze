@@ -1,0 +1,42 @@
+[
+    {
+        "maxAge": 1,
+        "epsActual": 15097.0,
+        "epsEstimate": 14072.188,
+        "epsDifference": 1024.81,
+        "surprisePercent": 0.0728,
+        "quarter": "2024-06-30",
+        "currency": "KRW",
+        "period": "-4q"
+    },
+    {
+        "maxAge": 1,
+        "epsActual": 11606.0,
+        "epsEstimate": 12880.73,
+        "epsDifference": -1274.73,
+        "surprisePercent": -0.099,
+        "quarter": "2024-09-30",
+        "currency": "KRW",
+        "period": "-3q"
+    },
+    {
+        "maxAge": 1,
+        "epsActual": 8625.0,
+        "epsEstimate": 7574.8257,
+        "epsDifference": 1050.17,
+        "surprisePercent": 0.13859999,
+        "quarter": "2024-12-31",
+        "currency": "KRW",
+        "period": "-2q"
+    },
+    {
+        "maxAge": 1,
+        "epsActual": 12076.0,
+        "epsEstimate": 27680.977,
+        "epsDifference": -15604.98,
+        "surprisePercent": -0.56369996,
+        "quarter": "2025-03-31",
+        "currency": "KRW",
+        "period": "-1q"
+    }
+]

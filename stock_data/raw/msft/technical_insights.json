@@ -13,9 +13,9 @@
                     "sectorDirection": "Bearish",
                     "sectorScore": 2,
                     "sectorScoreDescription": "Bearish Evidence",
-                    "indexDirection": "Bullish",
+                    "indexDirection": "Bearish",
                     "indexScore": 1,
-                    "indexScoreDescription": "Weak Bullish Evidence"
+                    "indexScoreDescription": "Weak Bearish Evidence"
                 },
                 "intermediateTermOutlook": {
                     "stateDescription": "Recent bullish events outweigh bearish events.",
@@ -46,7 +46,7 @@
                 "provider": "Trading Central",
                 "support": 415.32,
                 "resistance": 459.28,
-                "stopLoss": 435.416534
+                "stopLoss": 438.324422
             },
             "valuation": {
                 "color": 0.0,

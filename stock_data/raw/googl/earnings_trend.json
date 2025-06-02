@@ -5,7 +5,7 @@
                 "maxAge": 1,
                 "period": "0q",
                 "endDate": "2025-06-30",
-                "growth": 0.1497,
+                "growth": 0.1494,
                 "earningsEstimate": {
                     "avg": 2.16314,
                     "low": 1.99,
@@ -26,10 +26,10 @@
                 },
                 "epsTrend": {
                     "current": 2.16314,
-                    "7daysAgo": 2.16276,
-                    "30daysAgo": 2.11758,
-                    "60daysAgo": 2.17339,
-                    "90daysAgo": 2.17414,
+                    "7daysAgo": 2.16314,
+                    "30daysAgo": 2.16423,
+                    "60daysAgo": 2.17404,
+                    "90daysAgo": 2.17553,
                     "epsTrendCurrency": "USD"
                 },
                 "epsRevisions": {
@@ -45,7 +45,7 @@
                 "maxAge": 1,
                 "period": "+1q",
                 "endDate": "2025-09-30",
-                "growth": 0.0591,
+                "growth": 0.0594,
                 "earningsEstimate": {
                     "avg": 2.23428,
                     "low": 2.01,
@@ -66,10 +66,10 @@
                 },
                 "epsTrend": {
                     "current": 2.23428,
-                    "7daysAgo": 2.23345,
-                    "30daysAgo": 2.20406,
-                    "60daysAgo": 2.2597,
-                    "90daysAgo": 2.25995,
+                    "7daysAgo": 2.23428,
+                    "30daysAgo": 2.23192,
+                    "60daysAgo": 2.26191,
+                    "90daysAgo": 2.26252,
                     "epsTrendCurrency": "USD"
                 },
                 "epsRevisions": {
@@ -85,7 +85,7 @@
                 "maxAge": 1,
                 "period": "0y",
                 "endDate": "2025-12-31",
-                "growth": 0.1925,
+                "growth": 0.1928,
                 "earningsEstimate": {
                     "avg": 9.59866,
                     "low": 8.8,
@@ -107,9 +107,9 @@
                 "epsTrend": {
                     "current": 9.59866,
                     "7daysAgo": 9.59686,
-                    "30daysAgo": 9.45381,
-                    "60daysAgo": 8.95827,
-                    "90daysAgo": 8.96116,
+                    "30daysAgo": 9.54792,
+                    "60daysAgo": 8.95777,
+                    "90daysAgo": 8.96065,
                     "epsTrendCurrency": "USD"
                 },
                 "epsRevisions": {
@@ -125,7 +125,7 @@
                 "maxAge": 1,
                 "period": "+1y",
                 "endDate": "2026-12-31",
-                "growth": 0.060900003,
+                "growth": 0.0608,
                 "earningsEstimate": {
                     "avg": 10.16791,
                     "low": 9.48,
@@ -147,9 +147,9 @@
                 "epsTrend": {
                     "current": 10.16791,
                     "7daysAgo": 10.14921,
-                    "30daysAgo": 10.15355,
-                    "60daysAgo": 10.21318,
-                    "90daysAgo": 10.2198,
+                    "30daysAgo": 10.18445,
+                    "60daysAgo": 10.21244,
+                    "90daysAgo": 10.21832,
                     "epsTrendCurrency": "USD"
                 },
                 "epsRevisions": {

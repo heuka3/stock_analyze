@@ -1,0 +1,42 @@
+{
+    "company_mappings": {
+        "AAPL": "Apple Inc.",
+        "MSFT": "Microsoft Corporation (마이크로소프트)",
+        "GOOGL": "Alphabet Inc.",
+        "GOOG": "Alphabet Inc. (구글)",
+        "AMZN": "Amazon.com Inc. (아마존)",
+        "TSLA": "Tesla Inc. (테슬라)",
+        "NVDA": "NVIDIA Corporation",
+        "META": "Meta Platforms Inc. (메타)",
+        "NFLX": "Netflix Inc. (넷플릭스)",
+        "005380.KS": "Hyundai Motor Company (현대자동차)"
+    },
+    "file_title_mappings": {
+        "income_statement_yearly.md": "📊 손익계산서 (연간)",
+        "income_statement_quarter.md": "📊 손익계산서 (분기)",
+        "balance_sheet_yearly.md": "🏛️ 재무상태표 (연간)",
+        "balance_sheet_quarter.md": "🏛️ 재무상태표 (분기)",
+        "cash_flow_yearly.md": "💰 현금흐름표 (연간)",
+        "cash_flow_quarter.md": "💰 현금흐름표 (분기)",
+        "all_financial_data_annual.md": "📈 전체 재무데이터 (연간)",
+        "all_financial_data_quarterly.md": "📈 전체 재무데이터 (분기)",
+        "financial_data.md": "💼 재무데이터 요약",
+        "key_stats.md": "🔑 주요 통계",
+        "product_portfolio.md": "🏭 제품 포트폴리오",
+        "segment_revenue_trends.md": "📊 부문별 매출 트렌드",
+        "market_summary.md": "🌍 시장 요약",
+        "corporate_events.md": "🏢 기업 이벤트",
+        "sec_filings.md": "📋 SEC 공시",
+        "summary_detail.md": "📄 기업 개요",
+        "valuation_measures.md": "💰 밸류에이션 지표",
+        "price_history.md": "📈 주가 이력",
+        "recommendation_trend.md": "👥 애널리스트 추천",
+        "grading_history.md": "📊 등급 이력",
+        "major_holders.md": "🏦 주요 주주",
+        "institution_ownership.md": "🏛️ 기관 보유",
+        "insider_transactions.md": "👔 내부자 거래",
+        "esg_scores.md": "🌱 ESG 점수",
+        "technical_insights.md": "📊 기술적 분석",
+        "volatility_metrics.md": "📉 변동성 지표"
+    }
+}

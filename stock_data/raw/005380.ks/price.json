@@ -1,0 +1,32 @@
+{
+    "005380.ks": {
+        "maxAge": 1,
+        "regularMarketChangePercent": -0.029842932,
+        "regularMarketChange": -5700.0,
+        "regularMarketTime": "2025-05-30 15:30:14",
+        "priceHint": 2,
+        "regularMarketPrice": 185300.0,
+        "regularMarketDayHigh": 187500.0,
+        "regularMarketDayLow": 185300.0,
+        "regularMarketVolume": 995766,
+        "regularMarketPreviousClose": 191000.0,
+        "regularMarketSource": "DELAYED",
+        "regularMarketOpen": 187400.0,
+        "exchange": "KSC",
+        "exchangeName": "KSE",
+        "exchangeDataDelayedBy": 20,
+        "marketState": "CLOSED",
+        "quoteType": "EQUITY",
+        "symbol": "005380.KS",
+        "underlyingSymbol": null,
+        "shortName": "HyundaiMtr",
+        "longName": "Hyundai Motor Company",
+        "currency": "KRW",
+        "quoteSourceName": "Delayed Quote",
+        "currencySymbol": "₩",
+        "fromCurrency": null,
+        "toCurrency": null,
+        "lastMarket": null,
+        "marketCap": 46044456943616
+    }
+}

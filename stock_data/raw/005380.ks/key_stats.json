@@ -1,0 +1,32 @@
+{
+    "005380.ks": {
+        "maxAge": 1,
+        "priceHint": 2,
+        "enterpriseValue": 182886267355136,
+        "forwardPE": 3.7113025,
+        "profitMargins": 0.06958,
+        "floatShares": 153998949,
+        "sharesOutstanding": 202004000,
+        "heldPercentInsiders": 0.33303002,
+        "heldPercentInstitutions": 0.27906,
+        "beta": 0.989,
+        "impliedSharesOutstanding": 248486000,
+        "category": null,
+        "fundFamily": null,
+        "legalType": null,
+        "lastFiscalYearEnd": "2024-12-31 09:00:00",
+        "nextFiscalYearEnd": "2025-12-31 09:00:00",
+        "mostRecentQuarter": "2025-03-31 09:00:00",
+        "earningsQuarterlyGrowth": -0.023,
+        "netIncomeToCommon": 10692833837056,
+        "lastSplitFactor": null,
+        "enterpriseToRevenue": 1.022,
+        "enterpriseToEbitda": 10.467,
+        "52WeekChange": -0.30075473,
+        "SandP52WeekChange": 0.1189177,
+        "lastDividendValue": 2500.0,
+        "lastDividendDate": 1748476800,
+        "latestShareClass": null,
+        "leadInvestor": null
+    }
+}

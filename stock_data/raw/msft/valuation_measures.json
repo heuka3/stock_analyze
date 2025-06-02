@@ -130,16 +130,16 @@
         "PsRatio": 10.712442
     },
     {
-        "asOfDate": "2025-05-29 00:00:00",
+        "asOfDate": "2025-05-30 00:00:00",
         "periodType": "TTM",
-        "EnterpriseValue": 3390114219998.0,
-        "EnterprisesValueEBITDARatio": 22.5914,
-        "EnterprisesValueRevenueRatio": 12.5555,
-        "ForwardPeRatio": 30.581,
-        "MarketCap": 3409159219998.0,
-        "PbRatio": 10.591036,
-        "PeRatio": 35.446677,
-        "PegRatio": 2.1513,
-        "PsRatio": 12.686704
+        "EnterpriseValue": 3402600893691.0,
+        "EnterprisesValueEBITDARatio": 22.6746,
+        "EnterprisesValueRevenueRatio": 12.6018,
+        "ForwardPeRatio": 30.6748,
+        "MarketCap": 3421645893691.0,
+        "PbRatio": 10.629828,
+        "PeRatio": 35.576507,
+        "PegRatio": 2.1592,
+        "PsRatio": 12.733171
     }
 ]

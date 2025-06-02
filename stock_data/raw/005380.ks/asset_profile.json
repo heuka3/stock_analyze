@@ -1,0 +1,112 @@
+{
+    "005380.ks": {
+        "address1": "12, Heolleung-ro",
+        "address2": "Seocho-gu",
+        "city": "Seoul",
+        "country": "South Korea",
+        "phone": "82 2 3464 1114",
+        "fax": "82 2 3464 8719",
+        "website": "https://www.hyundai.com/worldwide/en/",
+        "industry": "Auto Manufacturers",
+        "industryKey": "auto-manufacturers",
+        "industryDisp": "Auto Manufacturers",
+        "sector": "Consumer Cyclical",
+        "sectorKey": "consumer-cyclical",
+        "sectorDisp": "Consumer Cyclical",
+        "longBusinessSummary": "Hyundai Motor Company, together with its subsidiaries, manufactures and distributes motor vehicles and parts worldwide. The company operates through Vehicle, Finance, and Others segments. It offers cars under the ELANTRA, SONATA, AZERA, i30, ACCENT, i20, and i10 names; eco vehicles under the IONIQ 9, INSTER, IONIQ 5, IONIQ 6, KONA Electric, NEXO, TUCSON Hybrid, SANTA FE Hybrid, SONATA Hybrid, AZERA Hybrid, i30 Hybrid, and STARIA Hybrid names; SUVs under the TUCSON, SANTA FE, KONA, PALISADE, CRETA, and VENUE names; and MPVs under the STARIA name; and commercial vehicles under the STARIA, H-1, and H-100 names, as well as N series and N Line series vehicles under various names. The company also provides trucks and vans; vehicle financing, credit card processing, and other financing activities; train manufacturing services and other activities; and marketing, engineering, transport, mobility, logistics, and insurance services, as well as operates a football club. Further, it is involved in real estate development activities. Hyundai Motor Company was incorporated in 1967 and is headquartered in Seoul, South Korea.",
+        "companyOfficers": [
+            {
+                "maxAge": 1,
+                "name": "Mr. Eui-Sun  Chung",
+                "age": 54,
+                "title": "Executive Chairman & CEO",
+                "yearBorn": 1970,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Mr. Randy  Parker",
+                "age": 57,
+                "title": "Chief Executive Officer",
+                "yearBorn": 1967,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Mr. Dong-Seock  Lee",
+                "age": 60,
+                "title": "President, CEO & Internal Director",
+                "yearBorn": 1964,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Mr. Jose Antonio  Munoz Barcelo",
+                "age": 59,
+                "title": "President, CEO & Internal Director",
+                "yearBorn": 1965,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Mr. Kim  Sung",
+                "title": "President",
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Mr. Seung Jo  Lee",
+                "age": 55,
+                "title": "Executive VP, CFO & Director",
+                "yearBorn": 1969,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Zayong  Koo",
+                "title": "Head of IR & Senior VP",
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Mr. Thomas  Schemera",
+                "age": 60,
+                "title": "Chief Marketing Officer & Head of the Customer Experience Division",
+                "yearBorn": 1964,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Mr. Luc  Donckerwolke",
+                "age": 58,
+                "title": "Executive VP & Chief Creative Officer",
+                "yearBorn": 1966,
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            },
+            {
+                "maxAge": 1,
+                "name": "Dong-Woo  Choi",
+                "title": "Executive VP & Head of the European Headquarters",
+                "exercisedValue": 0,
+                "unexercisedValue": 0
+            }
+        ],
+        "auditRisk": 1,
+        "boardRisk": 5,
+        "compensationRisk": 1,
+        "shareHolderRightsRisk": 1,
+        "overallRisk": 3,
+        "governanceEpochDate": "2025-05-01 09:00:00",
+        "executiveTeam": [],
+        "maxAge": 86400
+    }
+}

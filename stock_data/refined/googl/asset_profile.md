@@ -2,34 +2,56 @@
 
 ## 1. 회사 개요
 - **회사명**: Alphabet Inc.
-- **본사 위치**: 1600 Amphitheatre Parkway, Mountain View, California, United States
-- **설립일**: 1998년
-- **직원 수**: 185,719명
+- **본사 위치**: 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States
+- **설립 연도**: 1998년
+- **총 직원 수**: 185,719명
+- **산업군**: Communication Services
+- **산업 세부 분류**: Internet Content & Information
 
 ## 2. 사업 영역
-- **주요 사업 분야**: 인터넷 콘텐츠 및 정보
-- **산업 분류**: Internet Content & Information
-- **사업 개요**: Alphabet Inc.는 Google Services, Google Cloud, Other Bets 세 가지 주요 부문을 통해 다양한 제품과 플랫폼을 제공합니다. Google Services는 광고, Android, Chrome, Gmail, Google Drive, Google Maps, Google Photos, Google Play, Search, YouTube 등의 제품과 서비스를 포함하며, Google Cloud는 AI 인프라, 사이버 보안, 데이터 분석 등의 서비스를 제공합니다. Other Bets 부문은 헬스케어 관련 서비스와 인터넷 서비스를 제공합니다.
+Alphabet Inc.는 다양한 제품과 플랫폼을 제공하며, 주요 사업 부문은 Google Services, Google Cloud, Other Bets로 구성됨.
+
+- **Google Services**: 광고, Android, Chrome, Gmail, Google Drive, Google Maps, Google Photos, Google Play, Search, YouTube 등의 제품 및 서비스 제공. 앱 판매, 인앱 구매, 디지털 콘텐츠 판매, YouTube 구독 서비스 포함.
+- **Google Cloud**: AI 인프라, Vertex AI 플랫폼, 사이버 보안, 데이터 및 분석 서비스 제공. Google Workspace를 통해 기업용 클라우드 기반 커뮤니케이션 및 협업 도구 제공.
+- **Other Bets**: 헬스케어 관련 서비스 및 인터넷 서비스 판매.
 
 ## 3. 경영진
-- **CEO & Director**: Mr. Sundar Pichai, 51세, 총 보수 $10,319,413
-- **President & Chief Investment Officer**: Ms. Ruth M. Porat, 66세, 총 보수 $3,023,363
-- **Co-Founder & Director**: Dr. Lawrence Edward Page II, 51세, 총 보수 $1
-- **Co-Founder & Director**: Mr. Sergey Brin, 50세, 총 보수 $1
-- **Senior VP & CFO**: Ms. Anat Ashkenazi, 51세, 총 보수 $11,455,556
-- **President of Global Affairs, Chief Legal Officer & Company Secretary**: Mr. J. Kent Walker, 63세, 총 보수 $3,019,696
-- **Senior Vice President & Chief Business Officer of Google**: Mr. Philipp Schindler, 53세, 총 보수 $3,051,699
-- **Corporate Controller, Chief Accounting Officer & VP**: Ms. Amie Thuener O'Toole, 49세
-- **Vice President of Investor Relations**: Ms. Ellen West
-- **Chief People Officer**: Ms. Fiona Clare Cicconi, 58세
+| 이름 | 직책 | 나이 | 총보수(USD) |
+|------|------|------|-------------|
+| Mr. Sundar Pichai | CEO & Director | 51 | 10,319,413 |
+| Ms. Ruth M. Porat | President & Chief Investment Officer | 66 | 3,023,363 |
+| Dr. Lawrence Edward Page II | Co-Founder & Director | 51 | 1 |
+| Mr. Sergey Brin | Co-Founder & Director | 50 | 1 |
+| Ms. Anat Ashkenazi | Senior VP & CFO | 51 | 11,455,556 |
+| Mr. J. Kent Walker | President of Global Affairs, Chief Legal Officer & Company Secretary | 63 | 3,019,696 |
+| Mr. Philipp Schindler | Senior Vice President & Chief Business Officer of Google | 53 | 3,051,699 |
+| Ms. Amie Thuener O'Toole | Corporate Controller, Chief Accounting Officer & VP | 49 | - |
+| Ms. Ellen West | Vice President of Investor Relations | - | - |
+| Ms. Fiona Clare Cicconi | Chief People Officer | 58 | - |
+
+경영진은 다양한 분야에서의 경험과 전략적 기여를 통해 회사의 성장을 이끌고 있음.
 
 ## 4. 연락처 정보
-- **웹사이트**: [https://abc.xyz](https://abc.xyz)
-- **주소**: 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States
+- **공식 웹사이트**: [abc.xyz](https://abc.xyz)
+- **투자자 관계 사이트(IR)**: [abc.xyz/investor](https://abc.xyz/investor)
 - **전화번호**: 650-253-0000
+- **본사 주소**: 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States
 
-## 5. 투자 포인트
-- **다양한 사업 포트폴리오**: Alphabet Inc.는 Google Services, Google Cloud, Other Bets 등 다양한 사업 부문을 통해 수익을 창출하고 있습니다. 특히, Google Cloud의 AI 및 데이터 분석 서비스는 빠르게 성장하는 시장에서 중요한 역할을 할 것으로 예상됩니다.
-- **글로벌 시장 점유**: 미국, 유럽, 중동, 아프리카, 아시아 태평양, 캐나다, 라틴 아메리카 등 전 세계적으로 사업을 운영하고 있어, 지역적 리스크를 분산할 수 있는 장점이 있습니다.
-- **경영진의 전문성**: CEO Sundar Pichai를 비롯한 경영진은 기술 및 비즈니스 분야에서 풍부한 경험을 가지고 있으며, 이는 회사의 지속적인 혁신과 성장을 이끌 것으로 기대됩니다.
-- **리스크 관리**: 높은 보상 및 주주 권리 리스크가 존재하지만, 이는 회사의 성장 전략과 혁신적인 사업 모델을 통해 관리될 수 있습니다. 투자자는 이러한 리스크를 고려하여 장기적인 관점에서 접근하는 것이 중요합니다.
+## 5. 기업 지배구조 및 리스크
+| 리스크 항목 | 지표 | 해석 및 시사점 |
+|-------------|------|----------------|
+| 감사 리스크 | 7 | 중간 수준의 감사 리스크로, 내부 통제 및 감사 절차의 개선 필요성 있음. |
+| 이사회 리스크 | 8 | 이사회 구성 및 운영에 대한 개선 필요성 존재. |
+| 보상 리스크 | 10 | 보상 체계의 투명성과 공정성에 대한 우려가 큼. |
+| 주주 권리 리스크 | 10 | 주주 권리 보호에 대한 리스크가 높아, 주주와의 관계 개선 필요. |
+| 전반적 리스크 | 10 | 전반적으로 높은 리스크 수준으로, 지배구조 개선이 필요함. |
+
+## 6. 투자 포인트
+- **수익성**: Google Services와 Google Cloud의 강력한 수익 창출 능력.
+- **성장성**: AI 및 클라우드 서비스의 지속적인 성장 가능성.
+- **시장지위**: 글로벌 인터넷 서비스 및 정보 제공 분야에서의 선도적 위치.
+- **브랜드 가치**: Google 브랜드의 높은 인지도와 신뢰성.
+- **서비스 다각화**: 다양한 제품 및 서비스 포트폴리오를 통한 리스크 분산.
+
+## 7. 결론
+Alphabet Inc.는 강력한 브랜드 가치와 시장 지위를 바탕으로 지속적인 성장이 기대됨. 그러나 높은 지배구조 리스크는 주의가 필요하며, 주주 권리 보호 및 보상 체계 개선이 요구됨. 장기적으로는 AI 및 클라우드 서비스의 확장을 통한 성장 가능성이 크며, 주기적인 리스크 모니터링이 필요함.

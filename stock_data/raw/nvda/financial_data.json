@@ -1,10 +1,10 @@
 {
     "nvda": {
         "maxAge": 86400,
-        "currentPrice": 139.19,
+        "currentPrice": 135.13,
         "targetHighPrice": 220.0,
         "targetLowPrice": 100.0,
-        "targetMeanPrice": 169.43944,
+        "targetMeanPrice": 170.18019,
         "targetMedianPrice": 175.0,
         "recommendationMean": 1.44444,
         "recommendationKey": "strong_buy",

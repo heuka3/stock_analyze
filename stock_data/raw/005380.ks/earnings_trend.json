@@ -1,0 +1,167 @@
+{
+    "005380.ks": {
+        "trend": [
+            {
+                "maxAge": 1,
+                "period": "0q",
+                "endDate": "2025-06-30",
+                "growth": -0.0295,
+                "earningsEstimate": {
+                    "avg": 14652.304,
+                    "low": 11519.607,
+                    "high": 17785.0,
+                    "yearAgoEps": 15097.0,
+                    "numberOfAnalysts": 2,
+                    "growth": -0.0295,
+                    "earningsCurrency": "KRW"
+                },
+                "revenueEstimate": {
+                    "avg": 46891229000000,
+                    "low": 44397000000000,
+                    "high": 48224000000000,
+                    "numberOfAnalysts": 16,
+                    "yearAgoRevenue": 45021000000000,
+                    "growth": 0.041500002,
+                    "revenueCurrency": "KRW"
+                },
+                "epsTrend": {
+                    "current": 14652.304,
+                    "7daysAgo": 14646.929,
+                    "30daysAgo": 14313.254,
+                    "60daysAgo": 14032.129,
+                    "90daysAgo": 14032.129,
+                    "epsTrendCurrency": "KRW"
+                },
+                "epsRevisions": {
+                    "upLast7days": 1,
+                    "upLast30days": 0,
+                    "downLast30days": 1,
+                    "downLast7Days": 0,
+                    "downLast90days": {},
+                    "epsRevisionsCurrency": "KRW"
+                }
+            },
+            {
+                "maxAge": 1,
+                "period": "+1q",
+                "endDate": "2025-09-30",
+                "growth": 0.171,
+                "earningsEstimate": {
+                    "avg": 13590.51,
+                    "low": 10634.0205,
+                    "high": 16547.0,
+                    "yearAgoEps": 11606.0,
+                    "numberOfAnalysts": 2,
+                    "growth": 0.171,
+                    "earningsCurrency": "KRW"
+                },
+                "revenueEstimate": {
+                    "avg": 44571866210000,
+                    "low": 42189000000000,
+                    "high": 45777000000000,
+                    "numberOfAnalysts": 16,
+                    "yearAgoRevenue": 42928332000000,
+                    "growth": 0.0383,
+                    "revenueCurrency": "KRW"
+                },
+                "epsTrend": {
+                    "current": 13590.51,
+                    "7daysAgo": 13228.319,
+                    "30daysAgo": 13380.317,
+                    "60daysAgo": 12635.031,
+                    "90daysAgo": 12635.031,
+                    "epsTrendCurrency": "KRW"
+                },
+                "epsRevisions": {
+                    "upLast7days": 1,
+                    "upLast30days": 0,
+                    "downLast30days": 1,
+                    "downLast7Days": 0,
+                    "downLast90days": {},
+                    "epsRevisionsCurrency": "KRW"
+                }
+            },
+            {
+                "maxAge": 1,
+                "period": "0y",
+                "endDate": "2025-12-31",
+                "growth": 0.0073,
+                "earningsEstimate": {
+                    "avg": 47964.52,
+                    "low": 38740.55,
+                    "high": 63359.0,
+                    "yearAgoEps": 47615.0,
+                    "numberOfAnalysts": 23,
+                    "growth": 0.0073,
+                    "earningsCurrency": "KRW"
+                },
+                "revenueEstimate": {
+                    "avg": 183293273380000,
+                    "low": 176233626160000,
+                    "high": 193975000000000,
+                    "numberOfAnalysts": 28,
+                    "yearAgoRevenue": 175231153000000,
+                    "growth": 0.046,
+                    "revenueCurrency": "KRW"
+                },
+                "epsTrend": {
+                    "current": 47964.52,
+                    "7daysAgo": 48479.0,
+                    "30daysAgo": 48863.062,
+                    "60daysAgo": 51639.715,
+                    "90daysAgo": 51999.145,
+                    "epsTrendCurrency": "KRW"
+                },
+                "epsRevisions": {
+                    "upLast7days": 0,
+                    "upLast30days": 4,
+                    "downLast30days": 13,
+                    "downLast7Days": 0,
+                    "downLast90days": {},
+                    "epsRevisionsCurrency": "KRW"
+                }
+            },
+            {
+                "maxAge": 1,
+                "period": "+1y",
+                "endDate": "2026-12-31",
+                "growth": 0.040900003,
+                "earningsEstimate": {
+                    "avg": 49928.562,
+                    "low": 36350.0,
+                    "high": 72793.3,
+                    "yearAgoEps": 47964.52,
+                    "numberOfAnalysts": 24,
+                    "growth": 0.040900003,
+                    "earningsCurrency": "KRW"
+                },
+                "revenueEstimate": {
+                    "avg": 189338709860000,
+                    "low": 173847000000000,
+                    "high": 205517000000000,
+                    "numberOfAnalysts": 28,
+                    "yearAgoRevenue": 183293273380000,
+                    "growth": 0.033,
+                    "revenueCurrency": "KRW"
+                },
+                "epsTrend": {
+                    "current": 49928.562,
+                    "7daysAgo": 50184.812,
+                    "30daysAgo": 50050.29,
+                    "60daysAgo": 53662.777,
+                    "90daysAgo": 53798.203,
+                    "epsTrendCurrency": "KRW"
+                },
+                "epsRevisions": {
+                    "upLast7days": 1,
+                    "upLast30days": 6,
+                    "downLast30days": 10,
+                    "downLast7Days": 0,
+                    "downLast90days": {},
+                    "epsRevisionsCurrency": "KRW"
+                }
+            }
+        ],
+        "maxAge": 1
+    }
+}

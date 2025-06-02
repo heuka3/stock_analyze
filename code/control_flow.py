@@ -11,6 +11,7 @@ from typing import Dict, Tuple, Optional
 import time
 import threading
 import queue
+import glob
 
 # OpenAI API 관련 임포트
 from openai import OpenAI
@@ -58,7 +59,6 @@ ALL_REFINE_FILES = NON_TIMESERIES_FILES | TIMESERIES_FILES
 
 # generate_dialogue.py에서 DIALOGUE_FLOW 가져오기
 from generate_dialogue import DIALOGUE_FLOW
-
 
 
 def run_subprocess_with_output(cmd: list, cwd: Path, prefix: str = "") -> subprocess.CompletedProcess:
@@ -542,6 +542,105 @@ def run_tts_generation(script_file_path: str, output_audio_path: str):
     
     return result.returncode
 
+def merge_mp3_files(ticker_symbol: str) -> bool:
+    """주어진 티커의 모든 MP3 파일을 DIALOGUE_FLOW 순서로 합쳐서 combined.mp3 파일 생성"""
+    try:
+        ticker_dir = SPEAKING_DIR / ticker_symbol.lower()
+        if not ticker_dir.exists():
+            print(f"❌ 음성 파일 디렉토리가 존재하지 않습니다: {ticker_dir}")
+            return False
+        
+        # DIALOGUE_FLOW 순서로 파일 목록 생성
+        audio_files = []
+        
+        # intro 파일 추가
+        intro_files = list(ticker_dir.glob("intro.mp3"))
+        if intro_files:
+            audio_files.extend(sorted(intro_files))
+        
+        # 세그먼트 파일들을 DIALOGUE_FLOW 순서로 추가
+        for segment_idx, segment_info in enumerate(DIALOGUE_FLOW, 1):
+            for flow_idx, flow_info in enumerate(segment_info['flow'], 1):
+                speaker = flow_info['speaker']
+                script_type = flow_info['type']
+                
+                speaker_code = "opt" if speaker == "optimistic" else "pes" if speaker == "pessimistic" else "mod"
+                type_code = "dev" if script_type == "development" else "res" if script_type == "response" else "sum"
+                
+                audio_filename = f"seg{segment_idx}_{speaker_code}_{type_code}_{flow_idx}.mp3"
+                audio_path = ticker_dir / audio_filename
+                
+                if audio_path.exists():
+                    audio_files.append(audio_path)
+        
+        if not audio_files:
+            print(f"❌ 합칠 MP3 파일이 없습니다: {ticker_symbol}")
+            return False
+        
+        # ffmpeg를 사용하여 파일 합치기
+        combined_file = ticker_dir / "combined.mp3"
+        temp_list_file = ticker_dir / "file_list.txt"
+        
+        # 파일 목록을 텍스트 파일로 작성 (ffmpeg concat 용)
+        with open(temp_list_file, 'w', encoding='utf-8') as f:
+            for audio_file in audio_files:
+                f.write(f"file '{audio_file.name}'\n")
+        
+        # ffmpeg 명령어 실행
+        ffmpeg_cmd = [
+            'ffmpeg', '-f', 'concat', '-safe', '0',
+            '-i', str(temp_list_file),
+            '-c', 'copy', str(combined_file), '-y'
+        ]
+        
+        print(f"🎵 MP3 파일 합치기 시작: {ticker_symbol} ({len(audio_files)}개 파일)")
+        result = subprocess.run(ffmpeg_cmd, cwd=ticker_dir, capture_output=True, text=True)
+        
+        # 임시 파일 삭제
+        temp_list_file.unlink()
+        
+        if result.returncode == 0:
+            print(f"✅ MP3 파일 합치기 완료: {combined_file}")
+            return True
+        else:
+            print(f"❌ MP3 파일 합치기 실패: {result.stderr}")
+            return False
+            
+    except Exception as e:
+        print(f"❌ MP3 파일 합치기 중 오류: {e}")
+        return False
+
+
+def update_ui_mappings(ticker_symbol: str, company_name: str) -> bool:
+    """ui_mappings.json에 새로운 회사 정보를 추가"""
+    try:
+        ui_mappings_file = PROJECT_ROOT / "resources" / "ui_mappings.json"
+        
+        # 기존 파일 읽기
+        if ui_mappings_file.exists():
+            with open(ui_mappings_file, 'r', encoding='utf-8') as f:
+                ui_mappings = json.load(f)
+        else:
+            ui_mappings = {"company_mappings": {}, "file_title_mappings": {}}
+        
+        # company_mappings 섹션이 없으면 생성
+        if "company_mappings" not in ui_mappings:
+            ui_mappings["company_mappings"] = {}
+        
+        # 새로운 회사 정보 추가 (이미 존재하면 업데이트)
+        ui_mappings["company_mappings"][ticker_symbol] = company_name
+        
+        # 파일에 저장
+        with open(ui_mappings_file, 'w', encoding='utf-8') as f:
+            json.dump(ui_mappings, f, ensure_ascii=False, indent=4)
+        
+        print(f"✅ UI 매핑 업데이트 완료: {ticker_symbol} -> {company_name}")
+        return True
+        
+    except Exception as e:
+        print(f"⚠️ UI 매핑 업데이트 실패: {e}")
+        return False
+
 
 def main():
     """메인 제어 함수"""
@@ -560,6 +659,10 @@ def main():
         # 1단계: 회사 정보 추출
         print("\n=== 1단계: 회사 정보 추출 ===")
         company_name, ticker_symbol = extract_company_info(user_request)
+        
+        # 1.5단계: UI 매핑 업데이트
+        print("\n=== 1.5단계: UI 매핑 업데이트 ===")
+        update_ui_mappings(ticker_symbol, company_name)
         
         # 2단계: 메인 흐름과 서브 흐름들을 병렬로 실행
         print("\n=== 2단계: 병렬 워크플로우 실행 ===")
@@ -597,6 +700,15 @@ def main():
             
             if not main_result:
                 raise Exception("메인 흐름이 실패했습니다")
+            
+            # MP3 파일 합치기
+            if main_result and moderator_result:
+                print(f"\n=== MP3 파일 합치기 ===")
+                merge_result = merge_mp3_files(ticker_symbol)
+                if merge_result:
+                    print(f"✅ 전체 대화 파일 생성 완료")
+                else:
+                    print(f"⚠️ MP3 파일 합치기 실패 (개별 파일은 사용 가능)")
         
         print(f"\n🎉 모든 작업이 완료되었습니다!")
         print(f"📊 결과 위치:")
