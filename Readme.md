@@ -36,7 +36,7 @@ Multi_Modal/
 ### 1단계: 정보 추출
 **입력:** 사용자 질의 (예: "애플 주식에 대해 말해줘")
 **처리 과정:** 
-- `extract_company_info()`가 OpenAI GPT-4를 사용하여 자연어 질의를 파싱
+- `extract_company_info()`가 OpenAI GPT-4o를 사용하여 자연어 질의를 파싱
 - 표준화된 회사명과 ticker symbol 추출
 - UI 표시를 위해 `ui_mappings.json` 업데이트
 
@@ -97,11 +97,11 @@ Multi_Modal/
 
 | 세그먼트 | 주제 | 주요 초점 | 핵심 파일 |
 |---------|-------|---------------|-----------|
-| **1. Fundamentals — Profitability** | ROE, ROA, 이익률, 매출 성장 | 재무 성과 지표 | `income_statement_*.md`, `financial_data.md` |
-| **2. Financial Health & Cash-Flow** | 부채비율, 유동성, 현금흐름 추세 | 대차대조표 건전성 | `balance_sheet_*.md`, `cash_flow_*.md` |
-| **3. Growth Drivers** | 시장 확장, 제품 포트폴리오, TAM 분석 | 사업 성장 잠재력 | `market_summary.md`, `corporate_events.md` |
-| **4. Valuation & Market Sentiment** | P/E 비율, 애널리스트 목표가, 가격 모멘텀 | 시장 가격책정과 심리 | `valuation_measures.md`, `recommendation_trend.md` |
-| **5. Risk & Technical Momentum** | 내부자 거래, ESG 요인, 기술적 지표 | 리스크 평가와 추세 | `major_holders.md`, `technical_insights.md` |
+| **1. Fundamentals — Profitability** | ROE, ROA, 이익률, 매출 성장 | 재무 성과 지표 | `income_statement_*.md`, `financial_data.md` 등|
+| **2. Financial Health & Cash-Flow** | 부채비율, 유동성, 현금흐름 추세 | 대차대조표 건전성 | `balance_sheet_*.md`, `cash_flow_*.md` 등|
+| **3. Growth Drivers** | 시장 확장, 제품 포트폴리오, TAM 분석 | 사업 성장 잠재력 | `market_summary.md`, `corporate_events.md` 등|
+| **4. Valuation & Market Sentiment** | P/E 비율, 애널리스트 목표가, 가격 모멘텀 | 시장 가격책정과 심리 | `valuation_measures.md`, `recommendation_trend.md` 등|
+| **5. Risk & Technical Momentum** | 내부자 거래, ESG 요인, 기술적 지표 | 리스크 평가와 추세 | `major_holders.md`, `technical_insights.md` 등|
 
 ### 발화자 특성
 - **낙관적 분석가:** 성장 기회, 긍정적 촉매제, 경쟁 우위에 집중
@@ -225,7 +225,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 ## 📈 데이터 소스
 
 - **Yahoo Finance API:** 모든 금융 데이터의 주요 소스
-- **OpenAI GPT-4:** 자연어 처리 및 분석 생성
+- **OpenAI GPT-4o:** 자연어 처리 및 분석 생성
 - **OpenAI TTS:** Text-to-speech 오디오 생성
 
 ## 🎯 주요 기능
