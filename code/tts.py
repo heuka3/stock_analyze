@@ -206,9 +206,10 @@ def generate_speech(text: str, voice: str, output_path: str, instruction: str = 
             "input": text
         }
         
-        # # instruction이 있으면 파라미터에 추가.. 왜인지는 모르겠으나 instruction이 있으면 안 되는 듯...?
-        # if instruction:
-        #     api_params["instruction"] = instruction
+        # instruction이 있으면 파라미터에 추가.. 왜인지는 모르겠으나 instruction이 있으면 안 되는 듯...?
+        # instruction이 아니라 instructions로 보내야 함...
+        if instruction:
+            api_params["instructions"] = instruction
         
         with client.audio.speech.with_streaming_response.create(**api_params) as response:
             response.stream_to_file(speech_file_path)
