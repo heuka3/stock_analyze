@@ -37,6 +37,14 @@
         "insider_transactions.md": "👔 내부자 거래",
         "esg_scores.md": "🌱 ESG 점수",
         "technical_insights.md": "📊 기술적 분석",
-        "volatility_metrics.md": "📉 변동성 지표"
+        "volatility_metrics.md": "📉 변동성 지표",
+        "asset_profile.md": "🏢 기업 프로필",
+        "earning_history.md": "📈 실적 이력",
+        "earnings_trend.md": "📊 실적 트렌드",
+        "history_long_term.md": "📈 장기 주가 이력",
+        "history_middle_term.md": "📈 중기 주가 이력",
+        "history_short_term.md": "📈 단기 주가 이력",
+        "price.md": "💲 현재 주가 정보",
+        "quotes.md": "💹 시세 정보"
     }
 }

@@ -678,13 +678,6 @@ def main():
             # 서브 흐름 1: 사회자 대본/음성 생성
             moderator_future = executor.submit(run_moderator_flow, ticker_symbol, company_name)
             
-            # 향후 추가될 서브 흐름들을 위한 주석
-            # 서브 흐름 2: 예를 들어, 분석가 대본 생성
-            # analyst_future = executor.submit(run_analyst_flow, ticker_symbol, company_name)
-            
-            # 서브 흐름 3: 예를 들어, 요약 보고서 생성  
-            # summary_future = executor.submit(run_summary_flow, ticker_symbol, company_name)
-            
             # 모든 흐름 완료 대기
             main_result = main_future.result()
             moderator_result = moderator_future.result()

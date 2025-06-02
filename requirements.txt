@@ -1,0 +1,37 @@
+# Stock Analysis Dialogue Player - Required Packages
+# Core dependencies for the multi-modal stock analysis system
+
+# Web Framework
+streamlit>=1.28.0
+
+# Data Processing & Analysis
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Financial Data APIs
+yahooquery>=2.3.0
+yfinance>=0.2.0
+
+# Data Visualization
+matplotlib>=3.7.0
+
+# AI & Machine Learning
+openai>=1.12.0
+
+# Environment & Configuration
+python-dotenv>=1.0.0
+
+# HTTP Requests
+requests>=2.31.0
+
+# Development Tools (Optional - for Jupyter notebooks)
+ipython>=8.12.0
+
+# System Dependencies
+pathlib2>=2.3.7; python_version<"3.4"
+
+# Audio Processing (System dependency - install separately)
+# ffmpeg (install via: brew install ffmpeg on macOS or apt-get install ffmpeg on Linux)
+
+# Additional utilities
+typing-extensions>=4.5.0; python_version<"3.8"
